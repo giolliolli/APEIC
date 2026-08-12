@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>APEIC — Association pour l'Environnement de l'Île de Cavallo</title>
-  <meta name="description" content="APEIC est dédiée à la préservation et la valorisation de l'écosystème exceptionnel de l'Île de Cavallo en Corse. Découvrez notre manifeste et nos actions.">
-  
+  <meta name="description"
+    content="APEIC est dédiée à la préservation et la valorisation de l'écosystème exceptionnel de l'Île de Cavallo en Corse. Découvrez notre manifeste et nos actions.">
+
   <!-- Tailwind CSS Play CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -51,7 +55,11 @@
       overflow-x: hidden;
     }
 
-    h1, h2, h3, h4, .font-editorial {
+    h1,
+    h2,
+    h3,
+    h4,
+    .font-editorial {
       font-family: 'Playfair Display', serif;
     }
 
@@ -67,13 +75,16 @@
     ::-webkit-scrollbar {
       width: 8px;
     }
+
     ::-webkit-scrollbar-track {
       background: #FAF9F6;
     }
+
     ::-webkit-scrollbar-thumb {
       background: #0F1E1A;
       border-radius: 4px;
     }
+
     ::-webkit-scrollbar-thumb:hover {
       background: #0D9488;
     }
@@ -84,6 +95,7 @@
       transform: translateY(30px);
       transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     .reveal.active {
       opacity: 1;
       transform: translateY(0);
@@ -100,80 +112,68 @@
     .bento-card {
       transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     .bento-card:hover {
       transform: translateY(-6px);
     }
+
     .bento-img {
       transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     .bento-card:hover .bento-img {
       transform: scale(1.06);
     }
+
+    /* Hero subtitle text shadow for readability */
+    .hero-text-shadow {
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45), 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
   </style>
 </head>
+
 <body class="selection:bg-sea selection:text-white">
 
   <!-- ==================== HEADER (NAVBAR) ==================== -->
   <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      
+
       <!-- Logo -->
       <a href="#" class="flex items-center space-x-3 group focus:outline-none">
-        <span class="font-serif font-bold text-xl tracking-widest uppercase mt-0.5 text-maquis group-hover:text-sea transition-colors duration-300">APEIC</span>
+        <span
+          class="font-serif font-bold text-xl tracking-widest uppercase mt-0.5 text-maquis group-hover:text-sea transition-colors duration-300">A.P.E.I.C.</span>
       </a>
 
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-widest uppercase text-maquis/80">
-        <a href="#manifeste" class="hover:text-sea transition-colors duration-300 focus:outline-none" data-i18n="nav.manifesto">LE MANIFESTE</a>
-        <a href="#ecosysteme" class="hover:text-sea transition-colors duration-300 focus:outline-none" data-i18n="nav.ecosystem">L'ÉCOSYSTÈME</a>
-        <a href="#charte" class="hover:text-sea transition-colors duration-300 focus:outline-none" data-i18n="nav.rules">ROADMAP</a>
+        <a href="#manifeste" class="hover:text-sea transition-colors duration-300 focus:outline-none"
+          data-i18n="nav.manifesto">LE MANIFESTE</a>
+        <a href="#ecosysteme" class="hover:text-sea transition-colors duration-300 focus:outline-none"
+          data-i18n="nav.ecosystem">L'ÉCOSYSTÈME</a>
+        <a href="#charte" class="hover:text-sea transition-colors duration-300 focus:outline-none"
+          data-i18n="nav.rules">ROADMAP</a>
       </nav>
 
       <!-- Right Controls & CTA -->
       <div class="flex items-center space-x-6">
         <!-- Language Switcher -->
         <div class="flex items-center space-x-2 text-xs font-bold tracking-wider">
-          <button id="lang-fr" class="text-maquis transition-colors focus:outline-none py-1 px-1 border-b border-maquis" onclick="switchLanguage('fr')">FR</button>
+          <button id="lang-fr" class="text-maquis transition-colors focus:outline-none py-1 px-1 border-b border-maquis"
+            onclick="switchLanguage('fr')">FR</button>
           <span class="text-maquis/30">|</span>
-          <button id="lang-en" class="text-maquis/50 hover:text-maquis transition-colors focus:outline-none py-1 px-1 border-b border-transparent" onclick="switchLanguage('en')">EN</button>
+          <button id="lang-en"
+            class="text-maquis/50 hover:text-maquis transition-colors focus:outline-none py-1 px-1 border-b border-transparent"
+            onclick="switchLanguage('en')">EN</button>
           <span class="text-maquis/30">|</span>
-          <button id="lang-it" class="text-maquis/50 hover:text-maquis transition-colors focus:outline-none py-1 px-1 border-b border-transparent" onclick="switchLanguage('it')">IT</button>
+          <button id="lang-it"
+            class="text-maquis/50 hover:text-maquis transition-colors focus:outline-none py-1 px-1 border-b border-transparent"
+            onclick="switchLanguage('it')">IT</button>
         </div>
 
-        <!-- CTA Button -->
-        <a href="mailto:apeic.iledecavallo@gmail.com" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 bg-maquis text-alabaster text-xs font-semibold tracking-widest uppercase rounded-sm border border-maquis hover:bg-transparent hover:text-maquis transition-all duration-300 focus:outline-none" data-i18n="nav.cta">
-          CONTACTEZ-NOUS
-        </a>
-
-        <!-- Mobile Menu Trigger -->
-        <button id="mobile-menu-btn" class="md:hidden text-maquis focus:outline-none p-1" aria-label="Toggle menu">
-          <i data-lucide="menu" class="w-6 h-6"></i>
-        </button>
       </div>
 
     </div>
 
-    <!-- Mobile Drawer Menu -->
-    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-alabaster/95 backdrop-blur-lg flex flex-col justify-center px-10 py-12 md:hidden">
-      <button id="mobile-menu-close" class="absolute top-6 right-6 text-maquis/60 focus:outline-none p-2">
-        <i data-lucide="x" class="w-8 h-8"></i>
-      </button>
-      <nav class="flex flex-col space-y-8 text-xl font-serif tracking-wider text-maquis mb-12">
-        <a href="#manifeste" class="hover:text-sea transition-colors" data-i18n="nav.manifesto" onclick="closeMobileMenu()">LE MANIFESTE</a>
-        <a href="#ecosysteme" class="hover:text-sea transition-colors" data-i18n="nav.ecosystem" onclick="closeMobileMenu()">L'ÉCOSYSTÈME</a>
-        <a href="#charte" class="hover:text-sea transition-colors" data-i18n="nav.rules" onclick="closeMobileMenu()">ROADMAP</a>
-      </nav>
-      <a href="mailto:apeic.iledecavallo@gmail.com" class="inline-flex items-center justify-center px-6 py-3.5 bg-maquis text-alabaster text-sm font-semibold tracking-widest uppercase rounded-sm border border-maquis hover:bg-transparent hover:text-maquis transition-all duration-300 focus:outline-none text-center" data-i18n="nav.cta" onclick="closeMobileMenu()">
-        CONTACTEZ-NOUS
-      </a>
-      <div class="flex items-center justify-center space-x-4 mt-12 text-sm font-bold tracking-wider">
-        <button id="mobile-lang-fr" class="text-maquis transition-colors focus:outline-none py-1 px-1 border-b border-maquis" onclick="switchLanguage('fr'); closeMobileMenu();">FR</button>
-        <span class="text-maquis/30">|</span>
-        <button id="mobile-lang-en" class="text-maquis/50 hover:text-maquis transition-colors focus:outline-none py-1 px-1 border-b border-transparent" onclick="switchLanguage('en'); closeMobileMenu();">EN</button>
-        <span class="text-maquis/30">|</span>
-        <button id="mobile-lang-it" class="text-maquis/50 hover:text-maquis transition-colors focus:outline-none py-1 px-1 border-b border-transparent" onclick="switchLanguage('it'); closeMobileMenu();">IT</button>
-      </div>
-    </div>
   </header>
 
 
@@ -181,28 +181,36 @@
   <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 text-alabaster overflow-hidden">
     <!-- Background Image with Overlay -->
     <div class="absolute inset-0 z-0">
-      <img src="assets/hero_background.png" alt="Cavallo Island Landscape" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gradient-to-t from-maquis via-maquis/40 to-maquis/30"></div>
+      <img src="assets/sfondo1.jpg" alt="Cavallo Island Landscape" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-maquis/50 via-maquis/10 to-transparent"></div>
     </div>
 
     <!-- Hero Content -->
     <div class="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col items-center">
-      
-      <h1 class="text-4xl md:text-7xl font-light tracking-wide leading-tight mb-8 font-serif" data-i18n="hero.title">
-        A.P.E.I.C :<br class="hidden md:inline"><span class="italic text-sand font-medium">Association pour la protection de l’environnement de l’Île de Cavallo</span>
+
+      <h1 class="text-4xl md:text-7xl font-light tracking-wide leading-tight mb-8 font-serif hero-text-shadow"
+        data-i18n="hero.title">
+        A.P.E.I.C.<br class="hidden md:inline"><span class="italic text-sand font-medium hero-text-shadow">Association
+          pour la protection de l'environnement de l'Île de Cavallo</span>
       </h1>
-      
-      <p class="max-w-2xl text-base md:text-lg text-alabaster/80 leading-relaxed font-light mb-12" data-i18n="hero.subtitle">
-        L'engagement d'une communauté unie pour préserver, restaurer et honorer l'un des écosystèmes les plus précieux et fragiles de la Méditerranée.
+
+      <p class="max-w-2xl text-base md:text-lg text-alabaster/80 leading-relaxed font-light mb-12"
+        data-i18n="hero.subtitle">
+        L'engagement d'une communauté unie pour préserver, restaurer et honorer l'un des écosystèmes les plus précieux
+        et fragiles de la Méditerranée.
       </p>
 
       <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
-        <a href="#manifeste" class="inline-flex items-center justify-center px-8 py-4 bg-sand text-maquis font-bold text-xs tracking-widest uppercase hover:bg-alabaster transition-all duration-300 shadow-lg rounded-sm" data-i18n="hero.btn1">
-          DÉCOUVRIR NOTRE MANIFESTE
+        <a href="mailto:apeic.iledecavallo@gmail.com"
+          class="inline-flex items-center justify-center px-8 py-4 bg-sand text-maquis font-bold text-xs tracking-widest uppercase hover:bg-alabaster transition-all duration-300 shadow-lg rounded-sm"
+          data-i18n="hero.btn1">
+          CONTACTEZ-NOUS
         </a>
-        <a href="#charte" class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-alabaster border border-alabaster/30 hover:border-alabaster text-xs font-semibold tracking-widest uppercase hover:bg-alabaster/10 transition-all duration-300 rounded-sm" data-i18n="hero.btn2">
-          ROADMAP
-        </a>
+        <button onclick="openResourcesModal()"
+          class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-alabaster border border-alabaster/30 hover:border-alabaster text-xs font-semibold tracking-widest uppercase hover:bg-alabaster/10 transition-all duration-300 rounded-sm focus:outline-none"
+          data-i18n="hero.btn2">
+          ESPACE RESSOURCES
+        </button>
       </div>
     </div>
 
@@ -213,31 +221,43 @@
   <!-- ==================== THE MANIFESTO (CORE SECTION) ==================== -->
   <section id="manifeste" class="relative py-24 md:py-36 bg-alabaster overflow-hidden">
     <div class="max-w-6xl mx-auto px-6">
-      
+
       <!-- Sub-headline and Category -->
       <div class="reveal flex flex-col items-center text-center mb-16">
         <div class="w-12 h-px bg-sea/50 mb-6"></div>
-        <span class="text-xs font-bold tracking-superwide uppercase text-sea mb-4" data-i18n="manifesto.category">LE MANIFESTE DE CAVALLO</span>
-        <h2 class="text-3xl md:text-5xl font-light text-maquis font-serif italic" data-i18n="manifesto.sub">Pour une harmonie retrouvée</h2>
+        <span class="text-xs font-bold tracking-superwide uppercase text-sea mb-4" data-i18n="manifesto.category">LE
+          MANIFESTE DE CAVALLO</span>
+        <h2 class="text-3xl md:text-5xl font-light text-maquis font-serif italic" data-i18n="manifesto.sub">Pour une
+          harmonie retrouvée</h2>
       </div>
 
       <!-- Two Column Magazine Layout -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-        
+
         <!-- Large Editorial Text left -->
         <div class="lg:col-span-8 reveal">
-          <p class="font-serif text-2xl md:text-4xl text-maquis leading-relaxed font-light mb-8 italic" data-i18n="manifesto.big">
-            « L’Île de Cavallo n'est pas une simple destination. C'est un équilibre infini d’une beauté sauvage, sculpté par le vent et préservé par le silence. »
+          <p class="font-serif text-2xl md:text-4xl text-maquis leading-relaxed font-light mb-8 italic"
+            data-i18n="manifesto.big">
+            « L’Île de Cavallo n'est pas une simple destination. C'est un équilibre infini d’une beauté sauvage, sculpté
+            par le vent et préservé par le silence. »
           </p>
           <div class="h-px bg-maquis/10 my-8"></div>
           <p class="text-base text-maquis/70 leading-relaxed font-light mb-6" data-i18n="manifesto.body1">
-            Depuis notre création, notre association rassemble résidents, plaisanciers et passionnés de nature autour d'une mission unique : veiller sur ce joyau de granite posé sur les eaux turquoise de la Corse du Sud. La beauté de notre île n'a d'égal que sa vulnérabilité. Face aux défis environnementaux, nous agissons chaque jour pour mettre en œuvre un modèle pionnier de cohabitation respectueuse de la faune, de la flore et des équilibres marins.
+            Depuis notre création, notre association rassemble résidents, plaisanciers et passionnés de nature autour
+            d'une mission unique : veiller sur ce joyau de granite posé sur les eaux turquoise de la Corse du Sud. La
+            beauté de notre île n'a d'égal que sa vulnérabilité. Face aux défis environnementaux, nous agissons chaque
+            jour pour mettre en œuvre un modèle pionnier de cohabitation respectueuse de la faune, de la flore et des
+            équilibres marins.
           </p>
           <p class="text-base text-maquis/70 leading-relaxed font-light" data-i18n="manifesto.body2">
-            La Charte de Cavallo témoigne de cette volonté de concilier la présence humaine avec la quiétude des écosystèmes. De la gestion éco-responsable des déchets à la préservation des herbiers de Posidonie par des mouillages régulés, chaque geste individuel contribue à perpétuer la majesté de l'archipel des Lavezzi.
+            La Charte de Cavallo témoigne de cette volonté de concilier la présence humaine avec la quiétude des
+            écosystèmes. De la gestion éco-responsable des déchets à la préservation des herbiers de Posidonie par des
+            mouillages régulés, chaque geste individuel contribue à perpétuer la majesté de l'archipel des Lavezzi.
           </p>
           <div class="mt-8">
-            <button id="open-manifesto-modal" class="inline-flex items-center justify-center px-6 py-3.5 bg-maquis text-alabaster border border-maquis hover:bg-transparent hover:text-maquis text-xs font-semibold tracking-widest uppercase transition-all duration-300 rounded-sm focus:outline-none shadow-sm" onclick="openManifestoModal()">
+            <button id="open-manifesto-modal"
+              class="inline-flex items-center justify-center px-6 py-3.5 bg-maquis text-alabaster border border-maquis hover:bg-transparent hover:text-maquis text-xs font-semibold tracking-widest uppercase transition-all duration-300 rounded-sm focus:outline-none shadow-sm"
+              onclick="openManifestoModal()">
               <span data-i18n="manifesto.readFullBtn">LIRE LE MANIFESTE COMPLET</span>
               <i data-lucide="book-open" class="w-4.5 h-4.5 ml-2.5"></i>
             </button>
@@ -252,16 +272,20 @@
             </span>
             <div>
               <h4 class="font-serif text-lg font-bold text-maquis" data-i18n="manifesto.sideTitle">Notre Fondation</h4>
-              <p class="text-[10px] tracking-widest font-semibold text-maquis/50 uppercase" data-i18n="manifesto.sideSub">DEPUIS 1994 &bull; CORSE</p>
+              <p class="text-[10px] tracking-widest font-semibold text-maquis/50 uppercase"
+                data-i18n="manifesto.sideSub">DEPUIS 1994 &bull; CORSE</p>
             </div>
           </div>
-          
+
           <div class="space-y-6 text-sm text-maquis/70 font-light">
             <p data-i18n="manifesto.sideBody">
-              L'APEIC collabore étroitement avec l'Office de l'Environnement de la Corse et la Réserve Naturelle des Bouches de Bonifacio afin de garantir le strict respect des règlementations locales et des équilibres écologiques.
+              L'APEIC collabore étroitement avec l'Office de l'Environnement de la Corse et la Réserve Naturelle des
+              Bouches de Bonifacio afin de garantir le strict respect des règlementations locales et des équilibres
+              écologiques.
             </p>
             <div class="border-t border-maquis/10 pt-6">
-              <h5 class="font-serif font-semibold text-maquis mb-2" data-i18n="manifesto.statsTitle">Quelques Chiffres clés</h5>
+              <h5 class="font-serif font-semibold text-maquis mb-2" data-i18n="manifesto.statsTitle">Quelques Chiffres
+                clés</h5>
               <ul class="space-y-3">
                 <li class="flex items-center justify-between text-xs">
                   <span data-i18n="manifesto.stat1">Herbier de Posidonie préservé</span>
@@ -287,17 +311,18 @@
 
 
   <!-- ==================== THE ISLAND & ECOSYSTEM (BENTO GRID) ==================== -->
-  <section id="ecosysteme" class="relative py-24 md:py-36 bg-maquis text-alabaster overflow-hidden">
-    
+  <section id="ecosysteme" class="relative py-24 md:py-36 bg-[#1e3a33] text-alabaster overflow-hidden">
+
     <!-- Background Design Element -->
-    <div class="absolute top-0 right-0 w-96 h-96 bg-sea/10 rounded-full blur-[100px] pointer-events-none"></div>
-    <div class="absolute bottom-0 left-0 w-96 h-96 bg-sand/5 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-sea/15 rounded-full blur-[100px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-sand/10 rounded-full blur-[120px] pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-6">
-      
+
       <!-- Section Title -->
       <div class="reveal flex flex-col items-center text-center mb-20">
-        <span class="text-xs font-semibold tracking-superwide uppercase text-sand mb-4" data-i18n="eco.title">TROIS PILIERS DE PRÉSERVATION</span>
+        <span class="text-xs font-semibold tracking-superwide uppercase text-sand mb-4" data-i18n="eco.title">TROIS
+          PILIERS DE PRÉSERVATION</span>
         <h2 class="text-3xl md:text-5xl font-light font-serif leading-tight max-w-2xl" data-i18n="eco.sub">
           Protéger la biodiversité de notre <span class="italic text-sand font-medium">Archipel précieux</span>
         </h2>
@@ -305,21 +330,30 @@
 
       <!-- Bento Grid Cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
+
         <!-- Pillar 1: Marine Ecosystem -->
-        <div class="bento-card group relative h-[500px] bg-maquis/60 border border-alabaster/10 overflow-hidden flex flex-col justify-end p-8 md:p-10 rounded-sm cursor-pointer" onclick="openPillarModal(1)">
+        <div
+          class="bento-card group relative h-[500px] bg-maquis/60 border border-alabaster/10 overflow-hidden flex flex-col justify-end p-8 md:p-10 rounded-sm cursor-pointer"
+          onclick="openPillarModal(1)">
           <!-- Background image inside card -->
           <div class="absolute inset-0 z-0">
-            <img src="assets/marine_life.png" alt="Marine Life" class="bento-img w-full h-full object-cover opacity-60">
-            <div class="absolute inset-0 bg-gradient-to-t from-maquis via-maquis/40 to-transparent"></div>
+            <img src="assets/marine_life.png" alt="Marine Life" class="bento-img w-full h-full object-cover opacity-80">
+            <div class="absolute inset-0 bg-gradient-to-t from-maquis/90 via-maquis/25 to-transparent"></div>
           </div>
           <div class="relative z-10 pointer-events-none">
-            <span class="text-[10px] tracking-superwide font-bold uppercase text-sand mb-3 block" data-i18n="eco.card1.tag">01. MER</span>
-            <h3 class="text-2xl font-light font-serif mb-4 text-alabaster group-hover:text-sand transition-colors duration-300" data-i18n="eco.card1.title">Mer</h3>
-            <p class="text-sm text-alabaster/70 leading-relaxed font-light mb-6 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-32 transition-all duration-500 overflow-hidden" data-i18n="eco.card1.body">
-              L'herbier de Posidonie est le poumon de notre golfe. En interdisant l'ancrage sauvage dans les zones sensibles, nous protégeons la nursery des espèces marines et luttons activement contre l'érosion des fonds marins.
+            <span class="text-[10px] tracking-superwide font-bold uppercase text-sand mb-3 block"
+              data-i18n="eco.card1.tag">01. MER</span>
+            <h3
+              class="text-2xl font-light font-serif mb-4 text-alabaster group-hover:text-sand transition-colors duration-300"
+              data-i18n="eco.card1.title">Mer</h3>
+            <p class="text-sm text-alabaster/70 leading-relaxed font-light mb-6 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-32 transition-all duration-500 overflow-hidden"
+              data-i18n="eco.card1.body">
+              L'herbier de Posidonie est le poumon de notre golfe. En interdisant l'ancrage sauvage dans les zones
+              sensibles, nous protégeons la nursery des espèces marines et luttons activement contre l'érosion des fonds
+              marins.
             </p>
-            <span class="inline-flex items-center text-xs font-semibold tracking-widest uppercase text-sand group-hover:text-alabaster transition-colors duration-300">
+            <span
+              class="inline-flex items-center text-xs font-semibold tracking-widest uppercase text-sand group-hover:text-alabaster transition-colors duration-300">
               <span data-i18n="eco.learnMore">En savoir plus</span>
               <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
             </span>
@@ -327,19 +361,29 @@
         </div>
 
         <!-- Pillar 2: Terrestrial Flora -->
-        <div class="bento-card group relative h-[500px] bg-maquis/60 border border-alabaster/10 overflow-hidden flex flex-col justify-end p-8 md:p-10 rounded-sm cursor-pointer" onclick="openPillarModal(2)">
+        <div
+          class="bento-card group relative h-[500px] bg-maquis/60 border border-alabaster/10 overflow-hidden flex flex-col justify-end p-8 md:p-10 rounded-sm cursor-pointer"
+          onclick="openPillarModal(2)">
           <!-- Background image inside card -->
           <div class="absolute inset-0 z-0">
-            <img src="assets/terrestrial_flora.jpeg" alt="Terrestrial Flora" class="bento-img w-full h-full object-cover opacity-60">
-            <div class="absolute inset-0 bg-gradient-to-t from-maquis via-maquis/40 to-transparent"></div>
+            <img src="assets/Galleria Foto/IMG_2848.jpg" alt="Terrestrial Flora & Roman Quarries"
+              class="bento-img w-full h-full object-cover opacity-80">
+            <div class="absolute inset-0 bg-gradient-to-t from-maquis/90 via-maquis/25 to-transparent"></div>
           </div>
           <div class="relative z-10 pointer-events-none">
-            <span class="text-[10px] tracking-superwide font-bold uppercase text-sand mb-3 block" data-i18n="eco.card2.tag">02. TERRE</span>
-            <h3 class="text-2xl font-light font-serif mb-4 text-alabaster group-hover:text-sand transition-colors duration-300" data-i18n="eco.card2.title">Terre</h3>
-            <p class="text-sm text-alabaster/70 leading-relaxed font-light mb-6 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-32 transition-all duration-500 overflow-hidden" data-i18n="eco.card2.body">
-              Le maquis de Cavallo abrite des espèces végétales protégées adaptées aux conditions arides et venteuses. Nous veillons à limiter l'urbanisation et à réhabiliter la flore naturelle de l'île pour maintenir l'équilibre faunique.
+            <span class="text-[10px] tracking-superwide font-bold uppercase text-sand mb-3 block"
+              data-i18n="eco.card2.tag">02. TERRE</span>
+            <h3
+              class="text-2xl font-light font-serif mb-4 text-alabaster group-hover:text-sand transition-colors duration-300"
+              data-i18n="eco.card2.title">Terre</h3>
+            <p class="text-sm text-alabaster/70 leading-relaxed font-light mb-6 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-32 transition-all duration-500 overflow-hidden"
+              data-i18n="eco.card2.body">
+              Le maquis de Cavallo abrite des espèces végétales protégées adaptées aux conditions arides et venteuses.
+              Nous veillons à limiter l'urbanisation et à réhabiliter la flore naturelle de l'île pour maintenir
+              l'équilibre faunique.
             </p>
-            <span class="inline-flex items-center text-xs font-semibold tracking-widest uppercase text-sand group-hover:text-alabaster transition-colors duration-300">
+            <span
+              class="inline-flex items-center text-xs font-semibold tracking-widest uppercase text-sand group-hover:text-alabaster transition-colors duration-300">
               <span data-i18n="eco.learnMore">En savoir plus</span>
               <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
             </span>
@@ -347,19 +391,28 @@
         </div>
 
         <!-- Pillar 3: Birds & Fauna -->
-        <div class="bento-card group relative h-[500px] bg-maquis/60 border border-alabaster/10 overflow-hidden flex flex-col justify-end p-8 md:p-10 rounded-sm cursor-pointer" onclick="openPillarModal(3)">
+        <div
+          class="bento-card group relative h-[500px] bg-maquis/60 border border-alabaster/10 overflow-hidden flex flex-col justify-end p-8 md:p-10 rounded-sm cursor-pointer"
+          onclick="openPillarModal(3)">
           <!-- Background image inside card -->
           <div class="absolute inset-0 z-0">
-            <img src="assets/sea_swallow.png" alt="Bird Protection" class="bento-img w-full h-full object-cover opacity-60">
-            <div class="absolute inset-0 bg-gradient-to-t from-maquis via-maquis/40 to-transparent"></div>
+            <img src="assets/sea_swallow.png" alt="Bird Protection"
+              class="bento-img w-full h-full object-cover opacity-80">
+            <div class="absolute inset-0 bg-gradient-to-t from-maquis/90 via-maquis/25 to-transparent"></div>
           </div>
           <div class="relative z-10 pointer-events-none">
-            <span class="text-[10px] tracking-superwide font-bold uppercase text-sand mb-3 block" data-i18n="eco.card3.tag">03. AIR</span>
-            <h3 class="text-2xl font-light font-serif mb-4 text-alabaster group-hover:text-sand transition-colors duration-300" data-i18n="eco.card3.title">Air</h3>
-            <p class="text-sm text-alabaster/70 leading-relaxed font-light mb-6 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-32 transition-all duration-500 overflow-hidden" data-i18n="eco.card3.body">
-              Protection des oiseaux marins et contrôle de l'espace aérien de l'île. L'APEIC veille à préserver la quiétude des zones de nidification des sternes (rondines de mer) et autres espèces protégées.
+            <span class="text-[10px] tracking-superwide font-bold uppercase text-sand mb-3 block"
+              data-i18n="eco.card3.tag">03. AIR</span>
+            <h3
+              class="text-2xl font-light font-serif mb-4 text-alabaster group-hover:text-sand transition-colors duration-300"
+              data-i18n="eco.card3.title">Air</h3>
+            <p class="text-sm text-alabaster/70 leading-relaxed font-light mb-6 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-32 transition-all duration-500 overflow-hidden"
+              data-i18n="eco.card3.body">
+              Protection des oiseaux marins et contrôle de l'espace aérien de l'île. L'APEIC veille à préserver la
+              quiétude des zones de nidification des sternes (rondines de mer) et autres espèces protégées.
             </p>
-            <span class="inline-flex items-center text-xs font-semibold tracking-widest uppercase text-sand group-hover:text-alabaster transition-colors duration-300">
+            <span
+              class="inline-flex items-center text-xs font-semibold tracking-widest uppercase text-sand group-hover:text-alabaster transition-colors duration-300">
               <span data-i18n="eco.learnMore">En savoir plus</span>
               <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
             </span>
@@ -375,29 +428,37 @@
   <!-- ==================== ROADMAP (TIMELINE) ==================== -->
   <section id="charte" class="relative py-24 md:py-36 bg-alabaster">
     <div class="max-w-5xl mx-auto px-6">
-      
+
       <!-- Section Title -->
       <div class="reveal flex flex-col items-center text-center mb-16">
-        <span class="text-xs font-semibold tracking-superwide uppercase text-sea mb-4" data-i18n="roadmap.title">NOTRE FEUILLE DE ROUTE</span>
-        <h2 class="text-3xl md:text-5xl font-light text-maquis font-serif" data-i18n="roadmap.sub">Passé, Présent et Avenir</h2>
+        <span class="text-xs font-semibold tracking-superwide uppercase text-sea mb-4" data-i18n="roadmap.title">NOTRE
+          FEUILLE DE ROUTE</span>
+        <h2 class="text-3xl md:text-5xl font-light text-maquis font-serif" data-i18n="roadmap.sub">Passé, Présent et
+          Avenir</h2>
         <p class="max-w-xl text-sm text-maquis/60 leading-relaxed font-light mt-4" data-i18n="roadmap.body">
-          Découvrez nos engagements et les objectifs atteints depuis notre fondation, ainsi que nos visions pour le futur de l'île.
+          Découvrez nos engagements et les objectifs atteints depuis notre fondation, ainsi que nos visions pour le
+          futur de l'île.
         </p>
       </div>
 
       <!-- Timeline Container -->
       <div class="relative border-l border-maquis/15 ml-6 pl-8 space-y-12 reveal">
-        
+
         <!-- Milestone 1: 1989 -->
         <div class="relative group">
           <!-- Dot -->
-          <div class="absolute left-0 top-2 -translate-x-1/2 w-3.5 h-3.5 bg-alabaster border-2 border-sea rounded-full group-hover:bg-sea group-hover:scale-125 transition-all duration-300 z-10"></div>
-          
-          <div class="p-6 bg-white border border-maquis/5 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div
+            class="absolute left-0 top-2 -translate-x-1/2 w-3.5 h-3.5 bg-alabaster border-2 border-sea rounded-full group-hover:bg-sea group-hover:scale-125 transition-all duration-300 z-10">
+          </div>
+
+          <div
+            class="p-6 bg-white border border-maquis/5 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
             <span class="text-xs font-bold text-sea font-serif mb-2 block">1989</span>
-            <h4 class="text-lg font-serif font-medium text-maquis mb-3" data-i18n="roadmap.m1.title">Fondation de l'APEIC</h4>
+            <h4 class="text-lg font-serif font-medium text-maquis mb-3" data-i18n="roadmap.m1.title">Fondation de
+              l'APEIC</h4>
             <p class="text-sm text-maquis/70 leading-relaxed font-light" data-i18n="roadmap.m1.desc">
-              Création de l'association et premières actions d'urgence pour stopper l'exploitation abusive des carrières de granit et préserver le paysage originel.
+              Création de l'association et premières actions d'urgence pour stopper l'exploitation abusive des carrières
+              de granit et préserver le paysage originel.
             </p>
           </div>
         </div>
@@ -405,13 +466,18 @@
         <!-- Milestone 2: 1995 -->
         <div class="relative group">
           <!-- Dot -->
-          <div class="absolute left-0 top-2 -translate-x-1/2 w-3.5 h-3.5 bg-alabaster border-2 border-sea rounded-full group-hover:bg-sea group-hover:scale-125 transition-all duration-300 z-10"></div>
-          
-          <div class="p-6 bg-white border border-maquis/5 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div
+            class="absolute left-0 top-2 -translate-x-1/2 w-3.5 h-3.5 bg-alabaster border-2 border-sea rounded-full group-hover:bg-sea group-hover:scale-125 transition-all duration-300 z-10">
+          </div>
+
+          <div
+            class="p-6 bg-white border border-maquis/5 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
             <span class="text-xs font-bold text-sea font-serif mb-2 block">1995</span>
-            <h4 class="text-lg font-serif font-medium text-maquis mb-3" data-i18n="roadmap.m2.title">Victoires Juridiques & PAZ</h4>
+            <h4 class="text-lg font-serif font-medium text-maquis mb-3" data-i18n="roadmap.m2.title">Victoires
+              Juridiques & PAZ</h4>
             <p class="text-sm text-maquis/70 leading-relaxed font-light" data-i18n="roadmap.m2.desc">
-              Opposizione vittoriosa alle modifiche del Piano di Lottizzazione (PAZ), impedendo progetti edilizi speculativi selvaggi.
+              Opposizione vittoriosa alle modifiche del Piano di Lottizzazione (PAZ), impedendo progetti edilizi
+              speculativi selvaggi.
             </p>
           </div>
         </div>
@@ -419,13 +485,18 @@
         <!-- Milestone 3: 2008 -->
         <div class="relative group">
           <!-- Dot -->
-          <div class="absolute left-0 top-2 -translate-x-1/2 w-3.5 h-3.5 bg-alabaster border-2 border-sea rounded-full group-hover:bg-sea group-hover:scale-125 transition-all duration-300 z-10"></div>
-          
-          <div class="p-6 bg-white border border-maquis/5 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div
+            class="absolute left-0 top-2 -translate-x-1/2 w-3.5 h-3.5 bg-alabaster border-2 border-sea rounded-full group-hover:bg-sea group-hover:scale-125 transition-all duration-300 z-10">
+          </div>
+
+          <div
+            class="p-6 bg-white border border-maquis/5 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
             <span class="text-xs font-bold text-sea font-serif mb-2 block">2008</span>
-            <h4 class="text-lg font-serif font-medium text-maquis mb-3" data-i18n="roadmap.m3.title">Censimenti del Territorio</h4>
+            <h4 class="text-lg font-serif font-medium text-maquis mb-3" data-i18n="roadmap.m3.title">Censimenti del
+              Territorio</h4>
             <p class="text-sm text-maquis/70 leading-relaxed font-light" data-i18n="roadmap.m3.desc">
-              Recensement complet des zones archéologiques de l'île et identification des sources d'eau douce pour guider la gestion environnementale.
+              Recensement complet des zones archéologiques de l'île et identification des sources d'eau douce pour
+              guider la gestion environnementale.
             </p>
           </div>
         </div>
@@ -433,27 +504,37 @@
         <!-- Milestone 4: 2017 -->
         <div class="relative group">
           <!-- Dot -->
-          <div class="absolute left-0 top-2 -translate-x-1/2 w-3.5 h-3.5 bg-alabaster border-2 border-sea rounded-full group-hover:bg-sea group-hover:scale-125 transition-all duration-300 z-10"></div>
-          
-          <div class="p-6 bg-white border border-maquis/5 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div
+            class="absolute left-0 top-2 -translate-x-1/2 w-3.5 h-3.5 bg-alabaster border-2 border-sea rounded-full group-hover:bg-sea group-hover:scale-125 transition-all duration-300 z-10">
+          </div>
+
+          <div
+            class="p-6 bg-white border border-maquis/5 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
             <span class="text-xs font-bold text-sea font-serif mb-2 block">2017</span>
-            <h4 class="text-lg font-serif font-medium text-maquis mb-3" data-i18n="roadmap.m4.title">Cartographie des Habitats</h4>
+            <h4 class="text-lg font-serif font-medium text-maquis mb-3" data-i18n="roadmap.m4.title">Cartographie des
+              Habitats</h4>
             <p class="text-sm text-maquis/70 leading-relaxed font-light" data-i18n="roadmap.m4.desc">
-              Financement de la première cartographie scientifique des habitats de l'île de Cavallo en collaboration avec le Pr. Paradis.
+              Financement de la première cartographie scientifique des habitats de l'île de Cavallo en collaboration
+              avec le Pr. Paradis.
             </p>
           </div>
         </div>
 
-        <!-- Milestone 5: 2023 -->
+        <!-- Milestone 5: Natura 2000 & Réserve -->
         <div class="relative group">
           <!-- Dot -->
-          <div class="absolute left-0 top-2 -translate-x-1/2 w-3.5 h-3.5 bg-alabaster border-2 border-sea rounded-full group-hover:bg-sea group-hover:scale-125 transition-all duration-300 z-10"></div>
-          
-          <div class="p-6 bg-white border border-maquis/5 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
-            <span class="text-xs font-bold text-sea font-serif mb-2 block">2023</span>
-            <h4 class="text-lg font-serif font-medium text-maquis mb-3" data-i18n="roadmap.m5.title">Natura 2000 & Réserve</h4>
+          <div
+            class="absolute left-0 top-2 -translate-x-1/2 w-3.5 h-3.5 bg-alabaster border-2 border-sea rounded-full group-hover:bg-sea group-hover:scale-125 transition-all duration-300 z-10">
+          </div>
+
+          <div
+            class="p-6 bg-white border border-maquis/5 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
+            <span class="text-xs font-bold text-sea font-serif mb-2 block" data-i18n="roadmap.m5.date">TBD</span>
+            <h4 class="text-lg font-serif font-medium text-maquis mb-3" data-i18n="roadmap.m5.title">Natura 2000 &
+              Réserve</h4>
             <p class="text-sm text-maquis/70 leading-relaxed font-light" data-i18n="roadmap.m5.desc">
-              Consolidation du rôle de Cavallo au sein de la Réserve Naturelle des Bouches de Bonifacio et mise à jour de la cartographie Natura 2000.
+              Consolidation du rôle de Cavallo au sein de la Réserve Naturelle des Bouches de Bonifacio et mise à jour
+              de la cartographie Natura 2000.
             </p>
           </div>
         </div>
@@ -461,13 +542,18 @@
         <!-- Milestone 6: Present -->
         <div class="relative group">
           <!-- Dot -->
-          <div class="absolute left-0 top-2 -translate-x-1/2 w-3.5 h-3.5 bg-alabaster border-2 border-sea rounded-full group-hover:bg-sea group-hover:scale-125 transition-all duration-300 z-10"></div>
-          
-          <div class="p-6 bg-white border border-maquis/5 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div
+            class="absolute left-0 top-2 -translate-x-1/2 w-3.5 h-3.5 bg-alabaster border-2 border-sea rounded-full group-hover:bg-sea group-hover:scale-125 transition-all duration-300 z-10">
+          </div>
+
+          <div
+            class="p-6 bg-white border border-maquis/5 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
             <span class="text-xs font-bold text-sea font-serif mb-2 block" data-i18n="roadmap.present.date">Oggi</span>
-            <h4 class="text-lg font-serif font-medium text-maquis mb-3" data-i18n="roadmap.present.title">Protezione continua e studi</h4>
+            <h4 class="text-lg font-serif font-medium text-maquis mb-3" data-i18n="roadmap.present.title">Direttiva
+              uccelli & ZPS (Zona di Protezione Speciale)</h4>
             <p class="text-sm text-maquis/70 leading-relaxed font-light" data-i18n="roadmap.present.desc">
-              Collaboration avec les agences environnementales, cartographie des habitats naturels (Natura 2000) et protection rigoureuse de la faune endémique et des herbiers de Posidonie.
+              Attuazione della Direttiva Uccelli e gestione della Zona di Protezione Speciale (ZPS), monitoraggio attivo
+              dell'avifauna e tutela degli equilibri ecologici.
             </p>
           </div>
         </div>
@@ -475,13 +561,19 @@
         <!-- Milestone 7: Future -->
         <div class="relative group">
           <!-- Dot -->
-          <div class="absolute left-0 top-2 -translate-x-1/2 w-3.5 h-3.5 bg-alabaster border-2 border-sea rounded-full group-hover:bg-sea group-hover:scale-125 transition-all duration-300 z-10"></div>
-          
-          <div class="p-6 bg-white border border-maquis/5 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
-            <span class="text-xs font-bold text-sea font-serif mb-2 block" data-i18n="roadmap.future.date">2026 e oltre</span>
-            <h4 class="text-lg font-serif font-medium text-maquis mb-3" data-i18n="roadmap.future.title">Prossimi obiettivi</h4>
+          <div
+            class="absolute left-0 top-2 -translate-x-1/2 w-3.5 h-3.5 bg-alabaster border-2 border-sea rounded-full group-hover:bg-sea group-hover:scale-125 transition-all duration-300 z-10">
+          </div>
+
+          <div
+            class="p-6 bg-white border border-maquis/5 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300">
+            <span class="text-xs font-bold text-sea font-serif mb-2 block" data-i18n="roadmap.future.date">2026 e
+              oltre</span>
+            <h4 class="text-lg font-serif font-medium text-maquis mb-3" data-i18n="roadmap.future.title">Zone Speciali
+              di Conservazione «ZSC» (ex SIC)</h4>
             <p class="text-sm text-maquis/70 leading-relaxed font-light" data-i18n="roadmap.future.desc">
-              Espansione delle zone di ripristino ecologico, implementazione di tecnologie sostenibili per l'isola e maggiore educazione ambientale per le future generazioni.
+              Obiettivo futuro: riconoscimento e gestione delle Zone Speciali di Conservazione (ZSC, ex Siti di
+              Interesse Comunitario), ripristino ecologico e tutela del territorio.
             </p>
           </div>
         </div>
@@ -490,7 +582,8 @@
 
       <!-- Discover More PDF Button -->
       <div class="mt-16 text-center reveal">
-        <button id="open-resources-modal" onclick="openResourcesModal()" class="inline-flex items-center justify-center px-8 py-4 bg-maquis text-alabaster border border-maquis hover:bg-transparent hover:text-maquis text-xs font-semibold tracking-widest uppercase transition-all duration-300 rounded-sm shadow-lg focus:outline-none">
+        <button id="open-resources-modal" onclick="openResourcesModal()"
+          class="inline-flex items-center justify-center px-8 py-4 bg-maquis text-alabaster border border-maquis hover:bg-transparent hover:text-maquis text-xs font-semibold tracking-widest uppercase transition-all duration-300 rounded-sm shadow-lg focus:outline-none">
           <span data-i18n="roadmap.pdfBtn">Scopri di più</span>
           <i data-lucide="file-text" class="w-4 h-4 ml-2.5"></i>
         </button>
@@ -501,18 +594,28 @@
 
 
   <!-- ==================== FOOTER / CTA SECTION ==================== -->
-  <footer class="relative bg-maquis text-alabaster pt-24 pb-12 overflow-hidden">
+  <footer class="relative bg-[#1a2e28] text-alabaster pt-24 pb-12 overflow-hidden">
     <div class="max-w-7xl mx-auto px-6">
-      
+
       <!-- Newsletter signup & large CTA -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center border-b border-alabaster/10 pb-20 mb-16">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center border-b border-alabaster/10 pb-20 mb-16">
         <div class="lg:col-span-7 flex flex-col space-y-4">
-          <span class="text-[10px] tracking-superwide font-bold uppercase text-sand" data-i18n="footer.newsletterTag">AD HÉRER & SOUTENIR</span>
-          <h2 class="text-3xl md:text-5xl font-light font-serif text-alabaster leading-tight" data-i18n="footer.newsletterTitle">
-            Rejoignez l’esprit de Cavallo. <br class="hidden md:inline"><span class="italic text-sand font-medium">Soutenez notre action.</span>
+          <span class="text-[10px] tracking-superwide font-bold uppercase text-sand" data-i18n="footer.newsletterTag">AD
+            HÉRER & SOUTENIR</span>
+          <h2 class="text-3xl md:text-5xl font-light font-serif text-alabaster leading-tight"
+            data-i18n="footer.newsletterTitle">
+            Rejoignez l’esprit de Cavallo. <br class="hidden md:inline"><span
+              class="italic text-sand font-medium">Soutenez notre action.</span>
           </h2>
           <p class="text-sm text-alabaster/60 leading-relaxed font-light max-w-xl" data-i18n="footer.newsletterSub">
-            Inscrivez-vous pour recevoir les actualités de l'association, les règlementations environnementales saisonnières et nos rapports de préservation écologique.
+            Inscrivez-vous pour recevoir les actualités de l'association, les règlementations environnementales
+            saisonnières et nos rapports de préservation écologique.
+          </p>
+          <p class="text-xs text-alabaster/45 leading-relaxed font-light max-w-xl mt-3 italic"
+            data-i18n="footer.membershipInfo">
+            Pour toute information concernant l'adhésion à l'A.P.E.I.C., veuillez nous contacter par e-mail via le
+            bouton « Contactez-nous ».
           </p>
         </div>
 
@@ -520,20 +623,31 @@
           <form id="fundraising-form" class="flex flex-col space-y-4" onsubmit="handleFundraisingSubmit(event)">
             <!-- Donation Amount Presets -->
             <div class="grid grid-cols-4 gap-2">
-              <button type="button" class="py-2.5 bg-alabaster/5 border border-alabaster/15 hover:border-sand hover:text-sand text-xs font-semibold rounded-sm transition-all duration-300" onclick="selectDonationPreset(this, 25)">25 €</button>
-              <button type="button" class="py-2.5 bg-alabaster/5 border border-sand text-sand text-xs font-semibold rounded-sm transition-all duration-300" onclick="selectDonationPreset(this, 50)">50 €</button>
-              <button type="button" class="py-2.5 bg-alabaster/5 border border-alabaster/15 hover:border-sand hover:text-sand text-xs font-semibold rounded-sm transition-all duration-300" onclick="selectDonationPreset(this, 100)">100 €</button>
-              <button type="button" class="py-2.5 bg-alabaster/5 border border-alabaster/15 hover:border-sand hover:text-sand text-xs font-semibold rounded-sm transition-all duration-300" onclick="selectDonationPreset(this, 'custom')">Autre</button>
+              <button type="button"
+                class="py-2.5 bg-alabaster/5 border border-alabaster/15 hover:border-sand hover:text-sand text-xs font-semibold rounded-sm transition-all duration-300"
+                onclick="selectDonationPreset(this, 25)">25 €</button>
+              <button type="button"
+                class="py-2.5 bg-alabaster/5 border border-sand text-sand text-xs font-semibold rounded-sm transition-all duration-300"
+                onclick="selectDonationPreset(this, 50)">50 €</button>
+              <button type="button"
+                class="py-2.5 bg-alabaster/5 border border-alabaster/15 hover:border-sand hover:text-sand text-xs font-semibold rounded-sm transition-all duration-300"
+                onclick="selectDonationPreset(this, 100)">100 €</button>
+              <button type="button"
+                class="py-2.5 bg-alabaster/5 border border-alabaster/15 hover:border-sand hover:text-sand text-xs font-semibold rounded-sm transition-all duration-300"
+                onclick="selectDonationPreset(this, 'custom')">Autre</button>
             </div>
-            
+
             <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 items-stretch">
               <!-- Custom Amount Input -->
               <div class="relative flex-grow">
                 <span class="absolute left-4 top-1/2 -translate-y-1/2 text-alabaster/40 text-sm">€</span>
-                <input type="number" min="5" value="50" readonly class="w-full pl-8 pr-4 py-4 bg-alabaster/5 text-alabaster border border-alabaster/15 text-sm focus:outline-none focus:border-sand transition-colors duration-300 rounded-sm" id="donation-amount">
+                <input type="number" min="5" value="50" readonly
+                  class="w-full pl-8 pr-4 py-4 bg-alabaster/5 text-alabaster border border-alabaster/15 text-sm focus:outline-none focus:border-sand transition-colors duration-300 rounded-sm"
+                  id="donation-amount">
               </div>
-              
-              <button type="submit" class="px-6 py-4 bg-sand hover:bg-sandDark text-maquis font-bold text-xs tracking-widest uppercase transition-colors duration-300 rounded-sm flex items-center justify-center space-x-2 whitespace-nowrap">
+
+              <button type="submit"
+                class="px-6 py-4 bg-sand hover:bg-sandDark text-maquis font-bold text-xs tracking-widest uppercase transition-colors duration-300 rounded-sm flex items-center justify-center space-x-2 whitespace-nowrap">
                 <span data-i18n="footer.submitBtn">S'INSCRIRE</span>
                 <i data-lucide="heart" class="w-3.5 h-3.5"></i>
               </button>
@@ -548,30 +662,36 @@
 
       <!-- Main footer navigation & info -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-sm text-alabaster/60 font-light mb-16">
-        
+
         <!-- Column 1: Info -->
         <div class="space-y-4">
-          <div class="flex items-center space-x-3 text-alabaster font-serif font-bold text-xl tracking-widest uppercase mb-4">
-            <span>APEIC</span>
+          <div
+            class="flex items-center space-x-3 text-alabaster font-serif font-bold text-xl tracking-widest uppercase mb-4">
+            <span>A.P.E.I.C.</span>
           </div>
           <p class="text-xs leading-relaxed" data-i18n="footer.about">
-            Association à but non lucratif œuvrant pour la conservation du patrimoine naturel d'exception de l'Île de Cavallo en Corse du Sud.
+            Association à but non lucratif œuvrant pour la conservation du patrimoine naturel d'exception de l'Île de
+            Cavallo en Corse du Sud.
           </p>
         </div>
 
         <!-- Column 2: Quick Links -->
         <div class="space-y-4">
-          <h4 class="text-xs tracking-widest font-semibold text-alabaster uppercase mb-4" data-i18n="footer.col2Title">L'Association</h4>
+          <h4 class="text-xs tracking-widest font-semibold text-alabaster uppercase mb-4" data-i18n="footer.col2Title">
+            L'Association</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="#manifeste" class="hover:text-sand transition-colors" data-i18n="nav.manifesto">Le Manifeste</a></li>
-            <li><a href="#ecosysteme" class="hover:text-sand transition-colors" data-i18n="nav.ecosystem">L'Écosystème</a></li>
+            <li><a href="#manifeste" class="hover:text-sand transition-colors" data-i18n="nav.manifesto">Le
+                Manifeste</a></li>
+            <li><a href="#ecosysteme" class="hover:text-sand transition-colors"
+                data-i18n="nav.ecosystem">L'Écosystème</a></li>
             <li><a href="#charte" class="hover:text-sand transition-colors" data-i18n="nav.rules">Roadmap</a></li>
           </ul>
         </div>
 
         <!-- Column 3: Contact & Office -->
         <div class="space-y-4">
-          <h4 class="text-xs tracking-widest font-semibold text-alabaster uppercase mb-4" data-i18n="footer.col3Title">Contact</h4>
+          <h4 class="text-xs tracking-widest font-semibold text-alabaster uppercase mb-4" data-i18n="footer.col3Title">
+            Contact</h4>
           <p class="text-xs leading-relaxed">
             ASSOCIATION POUR LA PROTECTION DE L'ENVIRONNEMENT DE L'ILE DE CAVALLO "A.P.E.I.C"<br>
             Ile de Cavallo, 20169 Bonifacio
@@ -583,42 +703,45 @@
 
         <!-- Column 4: Institutional partner logos -->
         <div class="space-y-4">
-          <h4 class="text-xs tracking-widest font-semibold text-alabaster uppercase mb-4" data-i18n="footer.col4Title">Partenaires</h4>
+          <h4 class="text-xs tracking-widest font-semibold text-alabaster uppercase mb-4" data-i18n="footer.col4Title">
+            Partenaires</h4>
           <div class="flex flex-wrap gap-4 items-center opacity-65">
-            <span class="text-[9px] tracking-widest font-bold uppercase border border-alabaster/30 px-2.5 py-1.5 rounded-sm select-none hover:border-alabaster hover:opacity-100 transition-all duration-300">RN Bonifacio</span>
-            <span class="text-[9px] tracking-widest font-bold uppercase border border-alabaster/30 px-2.5 py-1.5 rounded-sm select-none hover:border-alabaster hover:opacity-100 transition-all duration-300">OEC Corse</span>
+            <span
+              class="text-[9px] tracking-widest font-bold uppercase border border-alabaster/30 px-2.5 py-1.5 rounded-sm select-none hover:border-alabaster hover:opacity-100 transition-all duration-300">RN
+              Bonifacio</span>
+            <span
+              class="text-[9px] tracking-widest font-bold uppercase border border-alabaster/30 px-2.5 py-1.5 rounded-sm select-none hover:border-alabaster hover:opacity-100 transition-all duration-300">OEC
+              Corse</span>
           </div>
         </div>
 
       </div>
 
-      <!-- Copyright & Bottom links -->
-      <div class="flex flex-col md:flex-row justify-between items-center text-[10px] text-alabaster/40 border-t border-alabaster/10 pt-8 space-y-4 md:space-y-0">
-        <div>
-          &copy; 2026 APEIC. All rights reserved. &bull; <span data-i18n="footer.ecoLuxury">Aesthetic Eco-Luxury Preservation</span>
-        </div>
-        <div class="flex space-x-6">
-          <a href="#" class="hover:text-sand transition-colors" data-i18n="footer.legal">Mentions Légales</a>
-          <a href="#" class="hover:text-sand transition-colors" data-i18n="footer.privacy">Politique de Confidentialité</a>
-        </div>
-      </div>
+
 
     </div>
   </footer>
 
 
   <!-- ==================== FULL MANIFESTO MODAL ==================== -->
-  <div id="manifesto-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-maquis/60 backdrop-blur-md p-4 md:p-8">
-    <div class="bg-alabaster text-maquis w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-sm shadow-2xl relative p-8 md:p-12 border border-maquis/10 transform scale-95 opacity-0 transition-all duration-300 ease-out" id="manifesto-modal-container">
+  <div id="manifesto-modal"
+    class="hidden fixed inset-0 z-50 flex items-center justify-center bg-maquis/60 backdrop-blur-md p-4 md:p-8">
+    <div
+      class="bg-alabaster text-maquis w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-sm shadow-2xl relative p-8 md:p-12 border border-maquis/10 transform scale-95 opacity-0 transition-all duration-300 ease-out"
+      id="manifesto-modal-container">
       <!-- Close button -->
-      <button class="absolute top-6 right-6 text-maquis/60 hover:text-sea transition-colors duration-300 p-1 focus:outline-none" onclick="closeManifestoModal()" aria-label="Close modal">
+      <button
+        class="absolute top-6 right-6 text-maquis/60 hover:text-sea transition-colors duration-300 p-1 focus:outline-none"
+        onclick="closeManifestoModal()" aria-label="Close modal">
         <i data-lucide="x" class="w-7 h-7"></i>
       </button>
 
       <!-- Modal Header -->
       <div class="border-b border-maquis/15 pb-6 mb-8">
-        <span class="text-xs font-semibold tracking-superwide uppercase text-sea block mb-2" data-i18n="manifesto.full.tag">DOCUMENT COMPLET & ARCHIVES</span>
-        <h2 class="text-3xl md:text-4xl font-light font-serif text-maquis text-center md:text-left" data-i18n="manifesto.full.title">Histoire & Statuts de l'A.P.E.I.C.</h2>
+        <span class="text-xs font-semibold tracking-superwide uppercase text-sea block mb-2"
+          data-i18n="manifesto.full.tag">DOCUMENT COMPLET & ARCHIVES</span>
+        <h2 class="text-3xl md:text-4xl font-light font-serif text-maquis text-center md:text-left"
+          data-i18n="manifesto.full.title">Histoire & Statuts de l'A.P.E.I.C.</h2>
       </div>
 
       <!-- Modal Content (original formatting) -->
@@ -626,7 +749,7 @@
         <p class="indent-6" data-i18n="manifesto.full.p1"></p>
         <p class="indent-6" data-i18n="manifesto.full.p2"></p>
         <p class="indent-6" data-i18n="manifesto.full.p3"></p>
-        
+
         <div class="pl-6 border-l-2 border-sea/30 my-4 space-y-2">
           <p class="font-bold text-maquis text-sm uppercase tracking-wide" data-i18n="manifesto.full.pubTitle"></p>
           <ul class="list-disc pl-6 space-y-2 text-sm italic">
@@ -654,7 +777,9 @@
 
       <!-- Modal Footer -->
       <div class="border-t border-maquis/15 pt-6 mt-8 flex justify-end">
-        <button class="px-6 py-2.5 bg-maquis text-alabaster border border-maquis hover:bg-transparent hover:text-maquis text-xs font-semibold tracking-widest uppercase transition-all duration-300 rounded-sm focus:outline-none" onclick="closeManifestoModal()" data-i18n="manifesto.full.closeBtn">
+        <button
+          class="px-6 py-2.5 bg-maquis text-alabaster border border-maquis hover:bg-transparent hover:text-maquis text-xs font-semibold tracking-widest uppercase transition-all duration-300 rounded-sm focus:outline-none"
+          onclick="closeManifestoModal()" data-i18n="manifesto.full.closeBtn">
           FERMER
         </button>
       </div>
@@ -663,37 +788,57 @@
 
 
   <!-- ==================== PILLAR MODAL (CAROUSEL) ==================== -->
-  <div id="pillar-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-maquis/80 backdrop-blur-md p-4 md:p-8">
-    <div class="bg-alabaster text-maquis w-full max-w-3xl max-h-[90vh] overflow-hidden rounded-sm shadow-2xl relative transform scale-95 opacity-0 transition-all duration-300 ease-out flex flex-col" id="pillar-modal-container">
-      
+  <div id="pillar-modal"
+    class="hidden fixed inset-0 z-50 flex items-center justify-center bg-maquis/80 backdrop-blur-md p-4 md:p-8">
+    <div
+      class="bg-alabaster text-maquis w-full max-w-3xl max-h-[90vh] overflow-hidden rounded-sm shadow-2xl relative transform scale-95 opacity-0 transition-all duration-300 ease-out flex flex-col"
+      id="pillar-modal-container">
+
       <!-- Close button -->
-      <button class="absolute top-4 right-4 z-20 bg-maquis/20 hover:bg-maquis/40 text-maquis hover:text-alabaster transition-colors duration-300 p-2 rounded-full focus:outline-none" onclick="closePillarModal()" aria-label="Close modal">
+      <button
+        class="absolute top-4 right-4 z-20 bg-maquis/20 hover:bg-maquis/40 text-maquis hover:text-alabaster transition-colors duration-300 p-2 rounded-full focus:outline-none"
+        onclick="closePillarModal()" aria-label="Close modal">
         <i data-lucide="x" class="w-6 h-6"></i>
       </button>
 
       <!-- Carousel Container -->
-      <div class="relative w-full h-64 md:h-80 bg-maquis/10 overflow-hidden group">
+      <div class="relative w-full h-64 md:h-80 bg-maquis/10 overflow-hidden group cursor-pointer"
+        onclick="openLightboxFromCarousel()">
         <div id="pillar-carousel-track" class="flex w-full h-full transition-transform duration-500 ease-in-out">
           <!-- Images injected by JS -->
         </div>
-        
+
+        <!-- Zoom / Expand overlay icon -->
+        <div
+          class="absolute top-4 left-4 z-20 bg-maquis/70 hover:bg-maquis text-alabaster px-3 py-1.5 rounded-sm text-xs font-semibold tracking-wider flex items-center space-x-1.5 transition-all shadow-md"
+          onclick="event.stopPropagation(); openLightboxFromCarousel();">
+          <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+          <span data-i18n="eco.expandImg">Vedi foto estesa</span>
+        </div>
+
         <!-- Controls -->
-        <button class="absolute left-4 top-1/2 -translate-y-1/2 bg-maquis/50 hover:bg-maquis text-alabaster p-2 rounded-full transition-colors focus:outline-none opacity-0 group-hover:opacity-100" onclick="prevPillarSlide()">
+        <button
+          class="absolute left-4 top-1/2 -translate-y-1/2 bg-maquis/50 hover:bg-maquis text-alabaster p-2 rounded-full transition-colors focus:outline-none opacity-0 group-hover:opacity-100 z-10"
+          onclick="event.stopPropagation(); prevPillarSlide()">
           <i data-lucide="chevron-left" class="w-5 h-5"></i>
         </button>
-        <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-maquis/50 hover:bg-maquis text-alabaster p-2 rounded-full transition-colors focus:outline-none opacity-0 group-hover:opacity-100" onclick="nextPillarSlide()">
+        <button
+          class="absolute right-4 top-1/2 -translate-y-1/2 bg-maquis/50 hover:bg-maquis text-alabaster p-2 rounded-full transition-colors focus:outline-none opacity-0 group-hover:opacity-100 z-10"
+          onclick="event.stopPropagation(); nextPillarSlide()">
           <i data-lucide="chevron-right" class="w-5 h-5"></i>
         </button>
 
         <!-- Dots -->
-        <div id="pillar-carousel-dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+        <div id="pillar-carousel-dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10"
+          onclick="event.stopPropagation()">
           <!-- Dots injected by JS -->
         </div>
       </div>
 
       <!-- Content -->
       <div class="p-8 md:p-10 overflow-y-auto">
-        <span id="pillar-modal-tag-el" class="text-xs font-semibold tracking-superwide uppercase text-sea block mb-2"></span>
+        <span id="pillar-modal-tag-el"
+          class="text-xs font-semibold tracking-superwide uppercase text-sea block mb-2"></span>
         <h2 id="pillar-modal-title" class="text-3xl md:text-4xl font-light font-serif text-maquis mb-4"></h2>
         <div id="pillar-modal-desc" class="text-sm md:text-base text-maquis/80 leading-relaxed space-y-6"></div>
       </div>
@@ -702,42 +847,57 @@
   </div>
 
   <!-- ==================== SCIENTIFIC RESOURCES MODAL ==================== -->
-  <div id="resources-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-maquis/80 backdrop-blur-md p-4 md:p-8">
-    <div class="bg-alabaster text-maquis w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-sm shadow-2xl relative p-8 md:p-12 border border-maquis/10 transform scale-95 opacity-0 transition-all duration-300 ease-out flex flex-col" id="resources-modal-container">
-      
+  <div id="resources-modal"
+    class="hidden fixed inset-0 z-50 flex items-center justify-center bg-maquis/80 backdrop-blur-md p-4 md:p-8">
+    <div
+      class="bg-alabaster text-maquis w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-sm shadow-2xl relative p-8 md:p-12 border border-maquis/10 transform scale-95 opacity-0 transition-all duration-300 ease-out flex flex-col"
+      id="resources-modal-container">
+
       <!-- Close button -->
-      <button class="absolute top-6 right-6 text-maquis/60 hover:text-sea transition-colors duration-300 p-1 focus:outline-none" onclick="closeResourcesModal()" aria-label="Close modal">
+      <button
+        class="absolute top-6 right-6 text-maquis/60 hover:text-sea transition-colors duration-300 p-1 focus:outline-none"
+        onclick="closeResourcesModal()" aria-label="Close modal">
         <i data-lucide="x" class="w-7 h-7"></i>
       </button>
 
       <!-- Modal Header -->
       <div class="border-b border-maquis/15 pb-6 mb-8">
-        <span class="text-xs font-semibold tracking-superwide uppercase text-sea block mb-2" data-i18n="resources.tag">CENTRE DE RECHERCHE SCIENTIFIQUE</span>
-        <h2 class="text-3xl md:text-4xl font-light font-serif text-maquis text-center md:text-left" data-i18n="resources.title">Études & Rapports Écologiques</h2>
+        <span class="text-xs font-semibold tracking-superwide uppercase text-sea block mb-2"
+          data-i18n="resources.tag">CENTRE DE RECHERCHE SCIENTIFIQUE</span>
+        <h2 class="text-3xl md:text-4xl font-light font-serif text-maquis text-center md:text-left"
+          data-i18n="resources.title">Études & Rapports Écologiques</h2>
         <p class="text-sm text-maquis/65 leading-relaxed font-light mt-2 max-w-2xl" data-i18n="resources.subtitle">
-          Retrouvez les études de terrain, cartographies et rapports scientifiques financés ou co-réalisés par l'APEIC pour la conservation de la biodiversité de l'Île de Cavallo.
+          Retrouvez les études de terrain, cartographies et rapports scientifiques financés ou co-réalisés par l'APEIC
+          pour la conservation de la biodiversité de l'Île de Cavallo.
         </p>
       </div>
 
       <!-- Resources Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-        
+
         <!-- Document 1: Prof. Filesi -->
-        <div class="bg-white p-6 border border-maquis/5 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between rounded-sm">
+        <div
+          class="bg-white p-6 border border-maquis/5 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between rounded-sm">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="px-2.5 py-1 bg-sea/10 text-sea text-[10px] font-bold tracking-wider uppercase rounded-sm" data-i18n="resources.doc1.tag">NOTE SYNTHÉTIQUE</span>
+              <span class="px-2.5 py-1 bg-sea/10 text-sea text-[10px] font-bold tracking-wider uppercase rounded-sm"
+                data-i18n="resources.doc1.tag">NOTE SYNTHÉTIQUE</span>
               <span class="text-xs text-maquis/40 font-mono">2025</span>
             </div>
-            <h3 class="font-serif text-xl font-medium text-maquis mb-2" data-i18n="resources.doc1.title"><i>Notes sur la valeur naturaliste de l'Île de Cavallo</i></h3>
-            <p class="text-xs text-maquis/50 mb-3 font-semibold" data-i18n="resources.doc1.author">Auteur: Prof. Leonardo Filesi (IUAV Venezia)</p>
+            <h3 class="font-serif text-xl font-medium text-maquis mb-2" data-i18n="resources.doc1.title"><i>Notes sur la
+                valeur naturaliste de l'Île de Cavallo</i></h3>
+            <p class="text-xs text-maquis/50 mb-3 font-semibold" data-i18n="resources.doc1.author">Auteur: Prof.
+              Leonardo Filesi (IUAV Venezia)</p>
             <p class="text-sm text-maquis/70 leading-relaxed font-light mb-6" data-i18n="resources.doc1.desc">
-              Synthèse des connaissances naturalistes sur la biodiversité de l'île. Met en avant la présence exceptionnelle de 426 espèces floristiques (371 autochtones) et de l'orchidée rare Gennaria diphylla.
+              Synthèse des connaissances naturalistes sur la biodiversité de l'île. Met en avant la présence
+              exceptionnelle de 426 espèces floristiques (371 autochtones) et de l'orchidée rare Gennaria diphylla.
             </p>
           </div>
           <div class="flex items-center justify-between pt-4 border-t border-maquis/5">
             <span class="text-xs text-maquis/40 font-semibold uppercase">PDF &bull; 246 KB</span>
-            <a href="Documenti/valeur%20naturaliste%20de%20l'Ile%20de%20Cavallo_Ci%20joint%20LF%2018%2011%202024.pdf" target="_blank" class="inline-flex items-center text-xs font-semibold tracking-wider uppercase text-sea hover:text-maquis transition-colors">
+            <a href="Documenti/valeur%20naturaliste%20de%20l'Ile%20de%20Cavallo_Ci%20joint%20LF%2018%2011%202024.pdf"
+              target="_blank"
+              class="inline-flex items-center text-xs font-semibold tracking-wider uppercase text-sea hover:text-maquis transition-colors">
               <span data-i18n="resources.doc1.btn">LIRE L'ÉTUDE</span>
               <i data-lucide="arrow-right" class="w-4 h-4 ml-1.5"></i>
             </a>
@@ -745,21 +905,27 @@
         </div>
 
         <!-- Document 2: Biotope Cartography -->
-        <div class="bg-white p-6 border border-maquis/5 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between rounded-sm">
+        <div
+          class="bg-white p-6 border border-maquis/5 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between rounded-sm">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="px-2.5 py-1 bg-sea/10 text-sea text-[10px] font-bold tracking-wider uppercase rounded-sm" data-i18n="resources.doc2.tag">RAPPORT D'HABITATS</span>
+              <span class="px-2.5 py-1 bg-sea/10 text-sea text-[10px] font-bold tracking-wider uppercase rounded-sm"
+                data-i18n="resources.doc2.tag">RAPPORT D'HABITATS</span>
               <span class="text-xs text-maquis/40 font-mono">2017</span>
             </div>
-            <h3 class="font-serif text-xl font-medium text-maquis mb-2" data-i18n="resources.doc2.title"><i>Cartographie des habitats naturels de l'île de Cavallo</i></h3>
-            <p class="text-xs text-maquis/50 mb-3 font-semibold" data-i18n="resources.doc2.author">Auteur: BIOTOPE (Florence Delay & Guilhan Paradis)</p>
+            <h3 class="font-serif text-xl font-medium text-maquis mb-2" data-i18n="resources.doc2.title"><i>Cartographie
+                des habitats naturels de l'île de Cavallo</i></h3>
+            <p class="text-xs text-maquis/50 mb-3 font-semibold" data-i18n="resources.doc2.author">Auteur: BIOTOPE
+              (Florence Delay & Guilhan Paradis)</p>
             <p class="text-sm text-maquis/70 leading-relaxed font-light mb-6" data-i18n="resources.doc2.desc">
-              Inventaire complet et description détaillée des 19 habitats d'intérêt communautaire de l'île, incluant les menaces potentielles liées aux espèces envahissantes comme la Griffe de sorcière.
+              Inventaire complet et description détaillée des 19 habitats d'intérêt communautaire de l'île, incluant les
+              menaces potentielles liées aux espèces envahissantes comme la Griffe de sorcière.
             </p>
           </div>
           <div class="flex items-center justify-between pt-4 border-t border-maquis/5">
             <span class="text-xs text-maquis/40 font-semibold uppercase">PDF &bull; 48.0 MB</span>
-            <a href="Documenti/CartoCavallo_Final3.pdf" target="_blank" class="inline-flex items-center text-xs font-semibold tracking-wider uppercase text-sea hover:text-maquis transition-colors">
+            <a href="Documenti/CartoCavallo_Final3.pdf" target="_blank"
+              class="inline-flex items-center text-xs font-semibold tracking-wider uppercase text-sea hover:text-maquis transition-colors">
               <span data-i18n="resources.doc2.btn">LIRE LE RAPPORT</span>
               <i data-lucide="arrow-right" class="w-4 h-4 ml-1.5"></i>
             </a>
@@ -767,21 +933,27 @@
         </div>
 
         <!-- Document 3: Atlas Biotope -->
-        <div class="bg-white p-6 border border-maquis/5 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between rounded-sm">
+        <div
+          class="bg-white p-6 border border-maquis/5 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between rounded-sm">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="px-2.5 py-1 bg-sea/10 text-sea text-[10px] font-bold tracking-wider uppercase rounded-sm" data-i18n="resources.doc3.tag">ATLAS CARTOGRAPHIQUE</span>
+              <span class="px-2.5 py-1 bg-sea/10 text-sea text-[10px] font-bold tracking-wider uppercase rounded-sm"
+                data-i18n="resources.doc3.tag">ATLAS CARTOGRAPHIQUE</span>
               <span class="text-xs text-maquis/40 font-mono">2017</span>
             </div>
-            <h3 class="font-serif text-xl font-medium text-maquis mb-2" data-i18n="resources.doc3.title"><i>Cartographie des habitats naturels : Atlas Cartographique</i></h3>
-            <p class="text-xs text-maquis/50 mb-3 font-semibold" data-i18n="resources.doc3.author">Auteur: BIOTOPE / APEIC</p>
+            <h3 class="font-serif text-xl font-medium text-maquis mb-2" data-i18n="resources.doc3.title"><i>Cartographie
+                des habitats naturels : Atlas Cartographique</i></h3>
+            <p class="text-xs text-maquis/50 mb-3 font-semibold" data-i18n="resources.doc3.author">Auteur: BIOTOPE /
+              APEIC</p>
             <p class="text-sm text-maquis/70 leading-relaxed font-light mb-6" data-i18n="resources.doc3.desc">
-              Atlas contenant les cartes détaillées de localisation et de répartition spatiale des différents biotopes et habitats d'intérêt communautaire sur le territoire de l'île de Cavallo.
+              Atlas contenant les cartes détaillées de localisation et de répartition spatiale des différents biotopes
+              et habitats d'intérêt communautaire sur le territoire de l'île de Cavallo.
             </p>
           </div>
           <div class="flex items-center justify-between pt-4 border-t border-maquis/5">
             <span class="text-xs text-maquis/40 font-semibold uppercase">PDF &bull; 19.1 MB</span>
-            <a href="Documenti/AtlasCartoCavalloFinal.pdf" target="_blank" class="inline-flex items-center text-xs font-semibold tracking-wider uppercase text-sea hover:text-maquis transition-colors">
+            <a href="Documenti/AtlasCartoCavalloFinal.pdf" target="_blank"
+              class="inline-flex items-center text-xs font-semibold tracking-wider uppercase text-sea hover:text-maquis transition-colors">
               <span data-i18n="resources.doc3.btn">VOIR L'ATLAS</span>
               <i data-lucide="arrow-right" class="w-4 h-4 ml-1.5"></i>
             </a>
@@ -789,29 +961,93 @@
         </div>
 
         <!-- Document 4: CBNC Compte-rendu -->
-        <div class="bg-white p-6 border border-maquis/5 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between rounded-sm">
+        <div
+          class="bg-white p-6 border border-maquis/5 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between rounded-sm">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="px-2.5 py-1 bg-sea/10 text-sea text-[10px] font-bold tracking-wider uppercase rounded-sm" data-i18n="resources.doc4.tag">RAPPORT DE PROSPECTION</span>
+              <span class="px-2.5 py-1 bg-sea/10 text-sea text-[10px] font-bold tracking-wider uppercase rounded-sm"
+                data-i18n="resources.doc4.tag">RAPPORT DE PROSPECTION</span>
               <span class="text-xs text-maquis/40 font-mono">2023</span>
             </div>
-            <h3 class="font-serif text-xl font-medium text-maquis mb-2" data-i18n="resources.doc4.title"><i>Prospections sur l'île de Cavallo compte-rendu de terrain du 12/10/2023</i></h3>
-            <p class="text-xs text-maquis/50 mb-3 font-semibold" data-i18n="resources.doc4.author">Auteur: Conservatoire Botanique National Corse (CBNC)</p>
+            <h3 class="font-serif text-xl font-medium text-maquis mb-2" data-i18n="resources.doc4.title"><i>Prospections
+                sur l'île de Cavallo compte-rendu de terrain du 12/10/2023</i></h3>
+            <p class="text-xs text-maquis/50 mb-3 font-semibold" data-i18n="resources.doc4.author">Auteur: Conservatoire
+              Botanique National Corse (CBNC)</p>
             <p class="text-sm text-maquis/70 leading-relaxed font-light mb-6" data-i18n="resources.doc4.desc">
-              Compte-rendu de terrain du 12/10/2023, avec relevés détaillés et comptage stationnel des populations d'espèces hautement menacées telles que le Limonium bonifaciense et la Silene velutina.
+              Compte-rendu de terrain du 12/10/2023, avec relevés détaillés et comptage stationnel des populations
+              d'espèces hautement menacées telles que le Limonium bonifaciense et la Silene velutina.
             </p>
           </div>
           <div class="flex items-center justify-between pt-4 border-t border-maquis/5">
             <span class="text-xs text-maquis/40 font-semibold uppercase">PDF &bull; 3.5 MB</span>
-            <a href="Documenti/03_CR_Cavallo_CBNC_12102023.pdf" target="_blank" class="inline-flex items-center text-xs font-semibold tracking-wider uppercase text-sea hover:text-maquis transition-colors">
+            <a href="Documenti/03_CR_Cavallo_CBNC_12102023.pdf" target="_blank"
+              class="inline-flex items-center text-xs font-semibold tracking-wider uppercase text-sea hover:text-maquis transition-colors">
               <span data-i18n="resources.doc4.btn">LIRE LE RAPPORT</span>
               <i data-lucide="arrow-right" class="w-4 h-4 ml-1.5"></i>
             </a>
           </div>
         </div>
 
+        <!-- Document 5: Médail F. ed, 2017 -->
+        <div
+          class="bg-white p-6 border border-maquis/5 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between rounded-sm">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 bg-sea/10 text-sea text-[10px] font-bold tracking-wider uppercase rounded-sm"
+                data-i18n="resources.doc5.tag">REVUE SCIENTIFIQUE</span>
+              <span class="text-xs text-maquis/40 font-mono">2017</span>
+            </div>
+            <h3 class="font-serif text-xl font-medium text-maquis mb-2" data-i18n="resources.doc5.title"><i>Le
+                patrimoine naturel de l’île di Cavallo (archipel des Lavezzi, Corse) - Ècologie, biogéographie et
+                conservation.</i></h3>
+            <p class="text-xs text-maquis/50 mb-1 font-semibold" data-i18n="resources.doc5.author">Auteur: Médail F. ed,
+              2017 (a)</p>
+            <p class="text-xs text-sea/80 mb-3 font-medium italic" data-i18n="resources.doc5.journal">Revue : Ecologia
+              mediterranea, 43 (2)</p>
+            <p class="text-sm text-maquis/70 leading-relaxed font-light mb-6" data-i18n="resources.doc5.desc">
+              Étude scientifique consacrée au patrimoine naturel, à l'écologie, à la biogéographie et à la conservation
+              de la biodiversité de l'île de Cavallo dans l'archipel des Lavezzi.
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-maquis/5">
+            <span class="text-xs text-maquis/40 font-semibold uppercase">LINK PERSÉE</span>
+            <a href="https://www.persee.fr/issue/ecmed_0153-8756_2017_num_43_2" target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center text-xs font-semibold tracking-wider uppercase text-sea hover:text-maquis transition-colors">
+              <span data-i18n="resources.doc5.btn">CONSULTER LA REVUE</span>
+              <i data-lucide="external-link" class="w-4 h-4 ml-1.5"></i>
+            </a>
+          </div>
+        </div>
+
       </div>
 
+    </div>
+  </div>
+
+
+  <!-- ==================== LIGHTBOX MODAL (FULLSCREEN IMAGE VIEWER) ==================== -->
+  <div id="lightbox-modal"
+    class="hidden fixed inset-0 z-[60] flex items-center justify-center bg-black/95 backdrop-blur-lg p-4 transition-all duration-300">
+    <button
+      class="absolute top-6 right-6 text-white/80 hover:text-white transition-colors p-2.5 rounded-full bg-white/10 hover:bg-white/20 focus:outline-none z-30"
+      onclick="closeLightbox()" aria-label="Close Lightbox">
+      <i data-lucide="x" class="w-7 h-7"></i>
+    </button>
+    <button
+      class="absolute left-6 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors p-3 rounded-full bg-white/10 hover:bg-white/20 focus:outline-none z-30"
+      onclick="prevLightboxSlide()" aria-label="Previous image">
+      <i data-lucide="chevron-left" class="w-8 h-8"></i>
+    </button>
+    <button
+      class="absolute right-6 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors p-3 rounded-full bg-white/10 hover:bg-white/20 focus:outline-none z-30"
+      onclick="nextLightboxSlide()" aria-label="Next image">
+      <i data-lucide="chevron-right" class="w-8 h-8"></i>
+    </button>
+    <div class="relative max-w-6xl max-h-[85vh] flex flex-col items-center justify-center">
+      <img id="lightbox-img" src="" alt="Expanded View"
+        class="max-h-[80vh] max-w-[90vw] object-contain rounded-sm shadow-2xl transition-transform duration-300">
+      <div id="lightbox-caption" class="text-alabaster/80 text-xs font-serif tracking-wider mt-4 text-center"></div>
     </div>
   </div>
 
@@ -836,10 +1072,10 @@
         "nav.rules": "ROADMAP",
         "nav.cta": "CONTACTEZ-NOUS",
         "hero.tag": "SANCTUAIRE DE L'ARCHIPEL DES LAVEZZI",
-        "hero.title": "A.P.E.I.C :<br class=\"hidden md:inline\"><span class=\"italic text-sand font-medium\">Association pour la protection de l’environnement de l’Île de Cavallo</span>",
+        "hero.title": "A.P.E.I.C.<br class=\"hidden md:inline\"><span class=\"italic text-sand font-medium\">Association pour la protection de l’environnement de l’Île de Cavallo</span>",
         "hero.subtitle": "L'engagement d'une communauté unie pour préserver, restaurer et honorer l'un des écosystèmes les plus précieux et fragiles de la Méditerranée.",
-        "hero.btn1": "DÉCOUVRIR NOTRE MANIFESTE",
-        "hero.btn2": "ROADMAP",
+        "hero.btn1": "CONTACTEZ-NOUS",
+        "hero.btn2": "ESPACE RESSOURCES",
         "hero.scroll": "DÉFILER",
         "manifesto.category": "LE MANIFESTE DE CAVALLO",
         "manifesto.sub": "Pour une harmonie retrouvée",
@@ -854,7 +1090,7 @@
         "manifesto.stat1": "Herbier de Posidonie préservé",
         "manifesto.stat2": "Espèces d'oiseaux protégées",
         "manifesto.stat3": "Villa owners signataires",
-        
+
         // Full Document Modal Keys (FR)
         "manifesto.full.tag": "DOCUMENT COMPLET & ARCHIVES",
         "manifesto.full.title": "Histoire & Statuts de l'A.P.E.I.C.",
@@ -889,7 +1125,7 @@
         "eco.card3.body": "Les côtes rocheuses et les lagunes constituent des sites critiques pour l'alimentation, le repos et la reproduction d'une avifaune spécialisée. L'APEIC s'engage dans la protection active des oiseaux marins et migrateurs.",
         "eco.learnMore": "EN SAVOIR PLUS",
         "eco.pillar1.detailed": "<p class=\"font-serif italic text-maquis text-base border-l-2 border-sea/30 pl-4 py-1\">« La présence de banquettes de Posidonies (Posidonia oceanica), lorsqu'elles existent, favorise la fixation du littoral. Dans la mesure du possible, les banquettes de posidonies doivent être maintenues sur place. »<br><span class=\"text-xs font-semibold uppercase text-maquis/50 not-italic block mt-1\">— Source : Biotope, Cartographie des Habitats, 2017, p. 20</span></p><p>L'herbier de Posidonie est une espèce clé de voûte de la Méditerranée. Il produit de l'oxygène, abrite une biodiversité marine exceptionnelle (zones de reproduction et d'alimentation) et protège le littoral contre les tempêtes en amortissant la houle.</p><p><strong>Nos actions :</strong> L'APEIC collabore avec la Réserve Naturelle des Bouches de Bonifacio pour interdire les mouillages sauvages dans les zones sensibles d'herbiers de Posidonie, en favorisant des mouillages écologiques réglementés pour préserver l'intégrité du milieu sous-marin.</p>",
-        "eco.pillar2.detailed": "<p class=\"font-serif italic text-maquis text-base border-l-2 border-sea/30 pl-4 py-1\">« Au total, 426 entités de flore vasculaire ont été trouvées, dont 371 autochtones et 55 exotiques. Un chiffre extraordinairement élevé compte tenu de l'extension. »<br><span class=\"text-xs font-semibold uppercase text-maquis/50 not-italic block mt-1\">— Source : Prof. L. Filesi, Notes sur la valeur naturaliste, 2025</span></p><p>L'Île de Cavallo abrite 70 espèces patrimoniales uniques (endémiques, protégées ou rares) :</p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Limonium bonifaciense (Statice de Bonifacio) :</strong> Unique espèce endémique à répartition restreinte de l'île. L'unique station littorale a été suivie par le CBNC en 2023, comptant 34 individus contre une vingtaine en 2014. Elle requiert une vigilance absolue face aux risques d'aménagement.</li><li><strong>Gennaria diphylla :</strong> Cette orchidée protégée possède sur Cavallo sa plus grande population en France (deux tiers des individus présents sur tout le territoire national), faisant de Cavallo le nœud principal de l'archipel.</li><li><strong>Silene velutina :</strong> Espèce rare protégée au niveau européen, présente en petites stations permanentes dans la Cala di Zeri et sur la côte nord.</li></ul><p>Le maquis de Genévrier turbiné (<em>Myrto communis-Juniperetum turbinatae</em>) constitue l'épine dorsale du paysage végétal. Sa sauvegarde nécessite de lutter activement contre la prolifération de la Griffe de sorcière (<em>Carpobrotus edulis</em>).</p>",
+        "eco.pillar2.detailed": "<p class=\"font-serif italic text-maquis text-base border-l-2 border-sea/30 pl-4 py-1\">« Au total, 426 entités de flore vasculaire ont été trouvées. Cavallo abrite également des vestiges préhistoriques et des carrières de granit romaines. »<br><span class=\"text-xs font-semibold uppercase text-maquis/50 not-italic block mt-1\">— Source : Prof. L. Filesi, Notes sur la valeur naturaliste, 2025</span></p><p><strong>Patrimoine Archéologique & Historique :</strong></p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Zones Préhistoriques :</strong> Traces d'occupations humaines anciennes et abris sous roche méritant une protection rigoureuse.</li><li><strong>Carrières de Granit de l'Époque Romaine :</strong> Prestigieux vestiges d'extraction antique de granit sur le littoral, à préserver de l'érosion et de toute dégradation.</li><li><strong>Parcours et Sentiers à Protéger :</strong> Réseau de sentiers terrestres et côtiers nécessitant un balisage et un contrôle pour préserver la flore fragile du piétinement.</li></ul><p><strong>Espèces Végétales Patrimoniales (70 espèces) :</strong></p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Limonium bonifaciense (Statice de Bonifacio) :</strong> Espèce endémique unique de l'île (34 individus en 2023).</li><li><strong>Gennaria diphylla :</strong> Orchidée rare hébergeant sur Cavallo les deux tiers de sa population nationale française.</li><li><strong>Silene velutina :</strong> Espèce rare protégée au niveau européen (Cala di Zeri).</li></ul><p>Le maquis à Genévrier de Corse (<em>Myrto communis-Juniperetum turbinatae</em>) constitue le cœur végétal du paysage.</p>",
         "eco.pillar3.detailed": "<p class=\"font-serif italic text-maquis text-base border-l-2 border-sea/30 pl-4 py-1\">« Ces habitats possèdent un grand intérêt pour la reproduction, l’alimentation et le repos de la faune aviaire autochtone et migratrice. »<br><span class=\"text-xs font-semibold uppercase text-maquis/50 not-italic block mt-1\">— Source : Biotope, Rapport d'Habitats, 2017, p. 60</span></p><p>La centralité de Cavallo au sein de la Réserve des Bouches de Bonifacio fait d'elle un havre indispensable pour l'avifaune. Les étangs temporaires et les lagunes (habitats prioritaires 1150* et 3170*) fournissent des zones de repos fondamentales pour les oiseaux migrateurs en transit.</p><p><strong>Zones de nidification :</strong> L'APEIC surveille particulièrement les zones littorales et les îlots environnants (comme Toro ou Lavezzi) qui accueillent la reproduction de la Sterne de Dougall et du Goéland d'Audouin. Nos objectifs incluent la réduction des nuisances touristiques durant les périodes sensibles de nidification.</p>",
         "resources.tag": "CENTRE DE RECHERCHE SCIENTIFIQUE",
         "resources.title": "Études & Rapports Écologiques",
@@ -914,6 +1150,12 @@
         "resources.doc4.author": "Auteur: Conservatoire Botanique National Corse (CBNC)",
         "resources.doc4.desc": "Compte-rendu de terrain du 12/10/2023, avec relevés détaillés et comptage stationnel des populations d'espèces hautement menacées telles que le Limonium bonifaciense et la Silene velutina.",
         "resources.doc4.btn": "LIRE LE RAPPORT",
+        "resources.doc5.tag": "REVUE SCIENTIFIQUE",
+        "resources.doc5.title": "<i>Le patrimoine naturel de l’île di Cavallo (archipel des Lavezzi, Corse) - Écologie, biogéographie et conservation.</i>",
+        "resources.doc5.author": "Auteur: Médail F. ed, 2017 (a)",
+        "resources.doc5.journal": "Revue : Ecologia mediterranea, 43 (2)",
+        "resources.doc5.desc": "Étude scientifique consacrée au patrimoine naturel, à l'écologie, à la biogéographie et à la conservation de la biodiversité de l'île de Cavallo.",
+        "resources.doc5.btn": "CONSULTER SUR PERSÉE",
         "roadmap.title": "NOTRE FEUILLE DE ROUTE",
         "roadmap.sub": "Passé, Présent et Avenir",
         "roadmap.body": "Découvrez nos engagements et les objectifs atteints depuis notre fondation, ainsi que nos visions pour le futur de l'île.",
@@ -925,18 +1167,20 @@
         "roadmap.m3.desc": "Recensement complet des zones archéologiques de l'île et identification des sources d'eau douce pour guider la gestion environnementale.",
         "roadmap.m4.title": "Cartographie des Habitats",
         "roadmap.m4.desc": "Financement de la première cartographie scientifique des habitats de l'île de Cavallo en collaboration avec le Pr. Paradis.",
+        "roadmap.m5.date": "TBD",
         "roadmap.m5.title": "Natura 2000 & Réserve",
         "roadmap.m5.desc": "Consolidation du rôle de Cavallo au sein de la Réserve Naturelle des Bouches de Bonifacio et mise à jour de la cartographie Natura 2000.",
         "roadmap.present.date": "Aujourd'hui",
-        "roadmap.present.title": "Protection Active & Suivi",
-        "roadmap.present.desc": "Surveillance active des herbiers de Posidonie, gestion éco-responsable et protection ciblée des oiseaux marins migrateurs et endémiques.",
+        "roadmap.present.title": "Directive Oiseaux & ZPS (Zone de Protection Spéciale)",
+        "roadmap.present.desc": "Situation actuelle : application de la Directive Oiseaux et gestion de la Zone de Protection Spéciale (ZPS), surveillance active de la faune et des herbiers de Posidonie.",
         "roadmap.future.date": "2026 et au-delà",
-        "roadmap.future.title": "Restauration Écologique",
-        "roadmap.future.desc": "Projet de restauration de la zone rudérale entre les Châteaux d'eau et la Marina, et transition énergétique pour un impact minimal.",
+        "roadmap.future.title": "Zones Spéciales de Conservation « ZSC » (ex SIC)",
+        "roadmap.future.desc": "Objectif futur : désignation et consolidation des Zones Spéciales de Conservation (ZSC, anciens Sites d'Intérêt Communautaire), projets de restauration écologique.",
         "roadmap.pdfBtn": "ESPACE RESSOURCES",
         "footer.newsletterTag": "SOUTENIR & PROTÉGER",
         "footer.newsletterTitle": "Protégez l’Île de Cavallo. <br class=\"hidden md:inline\"><span class=\"italic text-sand font-medium\">Soutenez nos actions écologiques.</span>",
         "footer.newsletterSub": "Vos contributions financent directement les études de terrain du Conservatoire Botanique, le suivi scientifique du Limonium bonifaciense et la réhabilitation écologique.",
+        "footer.membershipInfo": "Pour toute information concernant l'adhésion à l'A.P.E.I.C., veuillez nous contacter par e-mail via le bouton « Contactez-nous ».",
         "footer.placeholder": "Montant du don (€)",
         "footer.submitBtn": "FAIRE UN DON",
         "footer.successMsg": "Merci infiniment ! Votre don contribue directement à la préservation de Cavallo.",
@@ -954,10 +1198,10 @@
         "nav.rules": "ROADMAP",
         "nav.cta": "CONTACT US",
         "hero.tag": "SANCTUARY OF THE LAVEZZI ARCHIPELAGO",
-        "hero.title": "A.P.E.I.C :<br class=\"hidden md:inline\"><span class=\"italic text-sand font-medium\">Association pour la protection de l’environnement de l’Île de Cavallo</span>",
+        "hero.title": "A.P.E.I.C.<br class=\"hidden md:inline\"><span class=\"italic text-sand font-medium\">Association pour la protection de l’environnement de l’Île de Cavallo</span>",
         "hero.subtitle": "The commitment of a united community to preserve, restore, and honor one of the Mediterranean's most precious and fragile ecosystems.",
-        "hero.btn1": "DISCOVER OUR MANIFESTO",
-        "hero.btn2": "ROADMAP",
+        "hero.btn1": "CONTACT US",
+        "hero.btn2": "RESOURCE CENTER",
         "hero.scroll": "SCROLL DOWN",
         "manifesto.category": "THE CAVALLO MANIFESTO",
         "manifesto.sub": "Restoring Natural Harmony",
@@ -972,7 +1216,7 @@
         "manifesto.stat1": "Protected Posidonia meadows",
         "manifesto.stat2": "Protected marine bird species",
         "manifesto.stat3": "Villa owners signed",
-        
+
         // Full Document Modal Keys (EN)
         "manifesto.full.tag": "FULL DOCUMENT & ARCHIVES",
         "manifesto.full.title": "History & Bylaws of A.P.E.I.C.",
@@ -1001,13 +1245,14 @@
         "eco.card1.body": "The Posidonia seagrass meadow (Posidonia oceanica) is the lung of our gulf. By prohibiting wild anchoring in sensitive areas and protecting coastal Posidonia banquettes, we actively combat seabed erosion.",
         "eco.card2.tag": "02. LAND",
         "eco.card2.title": "Land",
-        "eco.card2.body": "The island is home to 426 vascular plant species with 70 unique patrimonial species, such as the rare Limonium bonifaciense and Gennaria diphylla. The Corsican Juniper maquis forms the vegetation's backbone.",
+        "eco.card2.body": "Preservation of prehistoric zones, Roman granite quarries, heritage trails to protect, and exceptional terrestrial flora (426 species including 70 patrimonial).",
+        "eco.expandImg": "View extended photo",
         "eco.card3.tag": "03. AIR",
         "eco.card3.title": "Air",
         "eco.card3.body": "Rocky coasts and lagoons constitute critical habitats for the feeding, resting, and nesting of specialized avifauna. APEIC is committed to active seabird and migratory bird protection.",
         "eco.learnMore": "LEARN MORE",
         "eco.pillar1.detailed": "<p class=\"font-serif italic text-maquis text-base border-l-2 border-sea/30 pl-4 py-1\">\"The presence of Posidonia banquettes (Posidonia oceanica), when they exist, promotes coastal fixation. As far as possible, posidonia banquettes must be kept in place.\"<br><span class=\"text-xs font-semibold uppercase text-maquis/50 not-italic block mt-1\">— Source: Biotope, Habitat Mapping Report, 2017, p. 20</span></p><p>The Posidonia seagrass meadow is a keystone species of the Mediterranean. It generates oxygen, supports exceptional marine biodiversity (serving as breeding and feeding grounds), and protects the coast from erosion by dampening wave energy.</p><p><strong>Our Actions:</strong> APEIC collaborates with the Bouches de Bonifacio Nature Reserve to prevent wild anchoring in sensitive Posidonia seagrass areas, promoting eco-friendly regulated moorings to safeguard the seabed.</p>",
-        "eco.pillar2.detailed": "<p class=\"font-serif italic text-maquis text-base border-l-2 border-sea/30 pl-4 py-1\">\"In total, 426 vascular flora entities were found, including 371 native and 55 exotic species. This is an extraordinarily high number given the island's size.\"<br><span class=\"text-xs font-semibold uppercase text-maquis/50 not-italic block mt-1\">— Source: Prof. L. Filesi, Notes on Natural Value, 2025</span></p><p>Cavallo Island hosts 70 patrimonial species (endemic, protected, or rare):</p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Limonium bonifaciense (Bonifacio Statice):</strong> The only narrow-range endemic species on the island. The unique coastal population was surveyed by the CBNC in 2023, counting 34 individuals (up from ~20 in 2014), demanding absolute protection against coastal development risks.</li><li><strong>Gennaria diphylla:</strong> This protected orchid has its largest French population on Cavallo (approx. two-thirds of the French total), making the island a vital ecological node for the archipelago.</li><li><strong>Silene velutina:</strong> A rare species protected at the European level, present in small permanent stations in Cala di Zeri and the northern coast.</li></ul><p>The Corsican Juniper maquis (<em>Myrto communis-Juniperetum turbinatae</em>) forms the backbone of the landscape. Preservation requires active control of the invasive Witch's Claw (<em>Carpobrotus edulis</em>).</p>",
+        "eco.pillar2.detailed": "<p class=\"font-serif italic text-maquis text-base border-l-2 border-sea/30 pl-4 py-1\">\"In total, 426 vascular flora entities were found, alongside prehistoric remains and Roman granite quarries.\"<br><span class=\"text-xs font-semibold uppercase text-maquis/50 not-italic block mt-1\">— Source: Prof. L. Filesi, Notes on Natural Value, 2025</span></p><p><strong>Archaeological & Historical Heritage:</strong></p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Prehistoric Zones:</strong> Ancient human settlement traces and rock shelters requiring strict preservation.</li><li><strong>Roman Granite Quarries:</strong> Historic coastal quarries dating back to the Roman period, protected from erosion and human impact.</li><li><strong>Protected Trails:</strong> Coastal and inland pathways curated to guide visitors while protecting fragile endemic flora from trampling.</li></ul><p><strong>Key Flora & Patrimonial Species (70 species):</strong></p><ul class=\"list-disc pl-6 space-y-2\"><li><strong>Limonium bonifaciense (Bonifacio Statice):</strong> Endemic species with a single coastal population of 34 individuals (CBNC 2023).</li><li><strong>Gennaria diphylla:</strong> Rare orchid with 2/3 of its national French population located on Cavallo.</li><li><strong>Silene velutina:</strong> Rare species protected under EU Directives.</li></ul><p>The Corsican Juniper maquis (<em>Myrto communis-Juniperetum turbinatae</em>) forms the backbone of the island's landscape.</p>",
         "eco.pillar3.detailed": "<p class=\"font-serif italic text-maquis text-base border-l-2 border-sea/30 pl-4 py-1\">\"These habitats possess great significance for the reproduction, feeding, and nesting of native and migratory avian fauna.\"<br><span class=\"text-xs font-semibold uppercase text-maquis/50 not-italic block mt-1\">— Source: Biotope, Habitat Mapping Report, 2017, p. 60</span></p><p>Cavallo's central position within the Bonifacio Nature Reserve makes it a crucial sanctuary for avifauna. The temporary ponds and lagoons (priority habitats 1150* and 3170*) provide essential resting grounds for migrating birds.</p><p><strong>Nesting sites:</strong> APEIC closely monitors coastal zones and surrounding islets (such as Toro or Lavezzi) which host breeding colonies of Dougall's Terns and Audouin's Gulls. Our goals focus on minimizing tourist disturbances during sensitive nesting seasons.</p>",
         "resources.tag": "SCIENTIFIC RESEARCH CENTER",
         "resources.title": "Ecological Studies & Reports",
@@ -1032,6 +1277,12 @@
         "resources.doc4.author": "Author: Conservatoire Botanique National Corse (CBNC)",
         "resources.doc4.desc": "Field report from 10/12/2023, featuring detailed surveys and counts of highly threatened populations such as Limonium bonifaciense and Silene velutina.",
         "resources.doc4.btn": "READ REPORT",
+        "resources.doc5.tag": "SCIENTIFIC JOURNAL",
+        "resources.doc5.title": "<i>Le patrimoine naturel de l’île di Cavallo (archipel des Lavezzi, Corse) - Écologie, biogéographie et conservation.</i>",
+        "resources.doc5.author": "Author: Médail F. ed, 2017 (a)",
+        "resources.doc5.journal": "Journal: Ecologia mediterranea, 43 (2)",
+        "resources.doc5.desc": "Scientific study dedicated to the natural heritage, ecology, biogeography, and conservation of Cavallo Island.",
+        "resources.doc5.btn": "VIEW ON PERSÉE",
         "roadmap.title": "OUR ROADMAP",
         "roadmap.sub": "Past, Present and Future",
         "roadmap.body": "Discover our commitments and the objectives achieved since our foundation, as well as our visions for the future of the island.",
@@ -1043,18 +1294,20 @@
         "roadmap.m3.desc": "Comprehensive survey of the island's archaeological zones and mapping of freshwater sources to guide environmental management.",
         "roadmap.m4.title": "Habitat Mapping",
         "roadmap.m4.desc": "Financing the first scientific mapping of Cavallo Island's natural habitats in collaboration with Prof. Paradis.",
+        "roadmap.m5.date": "TBD",
         "roadmap.m5.title": "Natura 2000 & Reserve",
         "roadmap.m5.desc": "Consolidating Cavallo's role within the Bouches de Bonifacio Nature Reserve and updating the Natura 2000 habitat mapping.",
         "roadmap.present.date": "Today",
-        "roadmap.present.title": "Active Protection & Monitoring",
-        "roadmap.present.desc": "Active monitoring of Posidonia meadows, eco-friendly management, and targeted protection of nesting and migratory seabirds.",
+        "roadmap.present.title": "Birds Directive & SPA (Special Protection Area)",
+        "roadmap.present.desc": "Current status: implementation of the Birds Directive and management of the Special Protection Area (SPA), active monitoring of Posidonia meadows and species protection.",
         "roadmap.future.date": "2026 and beyond",
-        "roadmap.future.title": "Ecological Restoration",
-        "roadmap.future.desc": "Restoration project for the ruderal area between the Châteaux d'eau and the Marina, alongside green energy transitions.",
+        "roadmap.future.title": "Special Areas of Conservation 'SAC' (former SCI)",
+        "roadmap.future.desc": "Future objective: designation and establishment of Special Areas of Conservation (SAC, former Sites of Community Importance) and ecological restoration.",
         "roadmap.pdfBtn": "RESOURCE CENTER",
         "footer.newsletterTag": "SUPPORT & PROTECT",
         "footer.newsletterTitle": "Protect Cavallo Island. <br class=\"hidden md:inline\"><span class=\"italic text-sand font-medium\">Support our ecological actions.</span>",
         "footer.newsletterSub": "Your donations directly fund botanical field studies, scientific monitoring of Limonium bonifaciense, and ecological restoration.",
+        "footer.membershipInfo": "For any information regarding membership of A.P.E.I.C., please contact us by email via the 'Contact Us' button.",
         "footer.placeholder": "Donation amount (€)",
         "footer.submitBtn": "DONATE NOW",
         "footer.successMsg": "Thank you so much! Your donation contributes directly to preserving Cavallo.",
@@ -1072,10 +1325,10 @@
         "nav.rules": "ROADMAP",
         "nav.cta": "CONTATTACI",
         "hero.tag": "SANTUARIO DELL'ARCIPELAGO DI LAVEZZI",
-        "hero.title": "A.P.E.I.C :<br class=\"hidden md:inline\"><span class=\"italic text-sand font-medium\">Association pour la protection de l’environnement de l’Île de Cavallo</span>",
+        "hero.title": "A.P.E.I.C.<br class=\"hidden md:inline\"><span class=\"italic text-sand font-medium\">Association pour la protection de l’environnement de l’Île de Cavallo</span>",
         "hero.subtitle": "L'impegno di una comunità unita per preservare, ripristinare e onorare uno degli ecosistemi più preziosi e fragili del Mediterraneo.",
-        "hero.btn1": "SCOPRI IL NOSTRO MANIFESTO",
-        "hero.btn2": "ROADMAP",
+        "hero.btn1": "CONTATTACI",
+        "hero.btn2": "SPAZIO RISORSE",
         "hero.scroll": "SCORRI",
         "manifesto.category": "IL MANIFESTO DI CAVALLO",
         "manifesto.sub": "Per un'armonia ritrovata",
@@ -1090,7 +1343,7 @@
         "manifesto.stat1": "Praterie di Posidonia tutelate",
         "manifesto.stat2": "Specie di uccelli marini protette",
         "manifesto.stat3": "Proprietari di ville firmatari",
-        
+
         // Full Document Modal Keys (IT)
         "manifesto.full.tag": "DOCUMENTO COMPLETO & ARCHIVIO",
         "manifesto.full.title": "Storia & Statuto dell'A.P.E.I.C.",
@@ -1149,6 +1402,12 @@
         "resources.doc4.author": "Autore: Conservatoire Botanique National Corse (CBNC)",
         "resources.doc4.desc": "Resoconto di campagna del 12/10/2023, con rilievi dettagliati e conteggio stazionale delle popolazioni di specie fortemente minacciate come il Limonium bonifaciense e la Silene velutina.",
         "resources.doc4.btn": "LEGGI IL RAPPORTO",
+        "resources.doc5.tag": "RIVISTA SCIENTIFICA",
+        "resources.doc5.title": "<i>Le patrimoine naturel de l'île di Cavallo (archipel des Lavezzi, Corse) - Écologie, biogéographie et conservation.</i>",
+        "resources.doc5.author": "Autore: Médail F. ed, 2017 (a)",
+        "resources.doc5.journal": "Rivista: Ecologia mediterranea, 43 (2)",
+        "resources.doc5.desc": "Studio scientifico dedicato al patrimonio naturale, all'ecologia, alla biogeografia e alla conservazione della biodiversità dell'isola di Cavallo.",
+        "resources.doc5.btn": "LEGGI SU PERSÉE",
         "roadmap.title": "LA NOSTRA ROADMAP",
         "roadmap.sub": "Passato, Presente e Futuro",
         "roadmap.body": "Scopri i nostri impegni e gli obiettivi raggiunti fin dalla nostra fondazione, nonché le nostre visioni per il futuro dell'isola.",
@@ -1160,18 +1419,20 @@
         "roadmap.m3.desc": "Rilevamento completo delle zone archeologiche dell'isola e mappatura delle sorgenti d'acqua dolce per guidare la tutela ambientale.",
         "roadmap.m4.title": "Mappatura degli Habitat",
         "roadmap.m4.desc": "Finanziamento della prima mappatura scientifica degli habitat dell'isola di Cavallo in collaborazione con il Prof. Paradis.",
+        "roadmap.m5.date": "TBD",
         "roadmap.m5.title": "Natura 2000 & Riserva",
         "roadmap.m5.desc": "Consolidamento del ruolo di Cavallo all'interno della Riserva Naturale delle Bocche di Bonifacio e aggiornamento degli habitat Natura 2000.",
         "roadmap.present.date": "Oggi",
-        "roadmap.present.title": "Protezione continua e studi",
-        "roadmap.present.desc": "Collaborazione con enti ambientali, censimento degli habitat naturali (Natura 2000) e protezione rigorosa della fauna endemica e delle praterie di Posidonia.",
+        "roadmap.present.title": "Direttiva Uccelli & ZPS (Zona di Protezione Speciale)",
+        "roadmap.present.desc": "Situazione attuale: attuazione della Direttiva Uccelli e gestione della Zona di Protezione Speciale (ZPS), monitoraggio attivo dell'avifauna e tutela degli equilibri ecologici.",
         "roadmap.future.date": "2026 e oltre",
-        "roadmap.future.title": "Prossimi obiettivi",
-        "roadmap.future.desc": "Espansione delle zone di ripristino ecologico, implementazione di tecnologie sostenibili per l'isola e maggiore educazione ambientale per le future generazioni.",
+        "roadmap.future.title": "Zone Speciali di Conservazione «ZSC» (ex SIC)",
+        "roadmap.future.desc": "Obiettivo futuro: riconoscimento e gestione delle Zone Speciali di Conservazione (ZSC, ex Siti di Interesse Comunitario), ripristino ecologico e tutela del territorio.",
         "roadmap.pdfBtn": "SPAZIO RISORSE",
         "footer.newsletterTag": "SOSTENERE & PROTEGGERE",
         "footer.newsletterTitle": "Proteggi l'Isola di Cavallo. <br class=\"hidden md:inline\"><span class=\"italic text-sand font-medium\">Sostieni le nostre azioni ecologiche.</span>",
         "footer.newsletterSub": "Le vostre donazioni finanziano direttamente gli studi botanici sul campo, il monitoraggio scientifico del Limonium bonifaciense e il ripristino ecologico.",
+        "footer.membershipInfo": "Per qualsiasi informazione riguardante l'adesione all'A.P.E.I.C., vi invitiamo a contattarci via e-mail tramite il pulsante 'Contattaci'.",
         "footer.placeholder": "Importo della donazione (€)",
         "footer.submitBtn": "DONA ORA",
         "footer.successMsg": "Grazie di cuore! La tua donazione contribuisce direttamente a preservare Cavallo.",
@@ -1234,24 +1495,7 @@
       });
     }
 
-    // -------------------------------------------------------------
-    // Mobile Navigation Controls
-    // -------------------------------------------------------------
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenuClose = document.getElementById('mobile-menu-close');
 
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
-    });
-
-    mobileMenuClose.addEventListener('click', closeMobileMenu);
-
-    function closeMobileMenu() {
-      mobileMenu.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-    }
 
     // -------------------------------------------------------------
     // Accordion Control (Rules)
@@ -1394,7 +1638,7 @@
       e.preventDefault();
       const amountInput = document.getElementById('donation-amount');
       const successDiv = document.getElementById('newsletter-success');
-      
+
       if (amountInput.value) {
         successDiv.classList.remove('hidden');
         setTimeout(() => {
@@ -1456,7 +1700,7 @@
         descKey: 'eco.pillar1.detailed'
       },
       2: {
-        images: ['assets/terrestrial_flora.jpeg', 'assets/limonium_bonifaciense.png', 'assets/juniper_maquis.png'],
+        images: ['assets/Galleria Foto/IMG_2848.jpg', 'assets/terrestrial_flora.jpeg', 'assets/limonium_bonifaciense.png', 'assets/juniper_maquis.png'],
         tagKey: 'eco.card2.tag',
         titleKey: 'eco.card2.title',
         descKey: 'eco.pillar2.detailed'
@@ -1469,12 +1713,15 @@
       }
     };
 
+    let currentPillarData = null;
+
     let currentPillarSlide = 0;
     let currentPillarTotalSlides = 0;
 
     function openPillarModal(pillarId) {
       const data = pillarData[pillarId];
       if (!data) return;
+      currentPillarData = data;
 
       // Update text
       document.getElementById('pillar-modal-tag-el').innerHTML = translations[currentLang][data.tagKey] || '';
@@ -1493,13 +1740,18 @@
         // Image
         const img = document.createElement('img');
         img.src = imgSrc;
-        img.className = 'w-full h-full object-cover flex-shrink-0';
+        img.className = 'w-full h-full object-cover flex-shrink-0 cursor-zoom-in';
+        img.title = 'Clicca per ingrandire foto estesa';
+        img.onclick = (e) => {
+          e.stopPropagation();
+          openLightbox(data.images, index);
+        };
         track.appendChild(img);
 
         // Dot
         const dot = document.createElement('button');
         dot.className = `w-2 h-2 rounded-full transition-colors focus:outline-none ${index === 0 ? 'bg-alabaster' : 'bg-alabaster/40 hover:bg-alabaster/70'}`;
-        dot.onclick = () => goToPillarSlide(index);
+        dot.onclick = (e) => { e.stopPropagation(); goToPillarSlide(index); };
         dotsContainer.appendChild(dot);
       });
 
@@ -1514,6 +1766,68 @@
       container.classList.remove('scale-95', 'opacity-0');
       container.classList.add('scale-100', 'opacity-100');
     }
+
+    // -------------------------------------------------------------
+    // Lightbox JS Functions
+    // -------------------------------------------------------------
+    let currentLightboxImages = [];
+    let currentLightboxIndex = 0;
+
+    function openLightbox(imagesArray, initialIndex = 0) {
+      if (!imagesArray || !imagesArray.length) return;
+      currentLightboxImages = imagesArray;
+      currentLightboxIndex = initialIndex;
+
+      updateLightboxContent();
+
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+      try { if (typeof lucide !== 'undefined') lucide.createIcons(); } catch (e) { }
+    }
+
+    function updateLightboxContent() {
+      const imgEl = document.getElementById('lightbox-img');
+      const captionEl = document.getElementById('lightbox-caption');
+      if (currentLightboxImages[currentLightboxIndex]) {
+        imgEl.src = currentLightboxImages[currentLightboxIndex];
+        captionEl.innerHTML = `Foto ${currentLightboxIndex + 1} / ${currentLightboxImages.length}`;
+      }
+    }
+
+    function prevLightboxSlide() {
+      if (currentLightboxImages.length === 0) return;
+      currentLightboxIndex = (currentLightboxIndex - 1 + currentLightboxImages.length) % currentLightboxImages.length;
+      updateLightboxContent();
+    }
+
+    function nextLightboxSlide() {
+      if (currentLightboxImages.length === 0) return;
+      currentLightboxIndex = (currentLightboxIndex + 1) % currentLightboxImages.length;
+      updateLightboxContent();
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.add('hidden');
+      if (document.getElementById('pillar-modal').classList.contains('hidden') &&
+        document.getElementById('manifesto-modal').classList.contains('hidden') &&
+        document.getElementById('resources-modal').classList.contains('hidden')) {
+        document.body.classList.remove('overflow-hidden');
+      }
+    }
+
+    function openLightboxFromCarousel() {
+      if (currentPillarData && currentPillarData.images) {
+        openLightbox(currentPillarData.images, currentPillarSlide);
+      }
+    }
+
+    document.getElementById('lightbox-modal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('lightbox-modal') || e.target === document.getElementById('lightbox-img')) {
+        closeLightbox();
+      }
+    });
 
     function closePillarModal() {
       const modal = document.getElementById('pillar-modal');
@@ -1559,4 +1873,5 @@
 
   </script>
 </body>
+
 </html>
